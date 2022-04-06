@@ -1,0 +1,11 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "REEL BEETZ"
+theme = "massively"
+[params]
+favicon = "reel-beetz-favicon.png"
+ignoreFiles = [ ".DS_Store" ]
+[taxonomies]
+  tag = ""
+  group = ""
+  category = ""

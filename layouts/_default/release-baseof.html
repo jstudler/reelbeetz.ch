@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ .Title }}</title>
+        <link rel="icon" type="image/jpg" href="{{ .Params.image }}" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+        <style>
+            * {
+                padding: 0; margin: 0;
+            }
+            p, h1, h2, h3, h4, h5, h6, a, a:hover {
+                color: {{ .Params.color }};
+            }
+            html, body {
+                width: 100%; height: 100%;
+                padding: 0; margin: 0;
+            }
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+            #bg {
+                z-index: 50;
+                overflow: hidden;
+                position: fixed; 
+                top: -50%; 
+                left: -50%; 
+                width: 200%; 
+                height: 200%;
+            }
+            #bg img {
+                filter: blur(150px);
+
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                right: 0; 
+                bottom: 0; 
+                margin: auto; 
+                min-width: 50%;
+                min-height: 50%;
+            }
+            #main {
+                z-index: 111;
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                right: 0; 
+                bottom: 0; 
+            }
+            #cover img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 3rem
+            }
+            #cover iframe {
+                width: 100%;
+                height: auto;
+            }
+            #title {
+                text-align: center;
+                margin-bottom: 3em;
+            }
+
+            /* Links */
+            ul li a svg {
+                width: 2.2rem;
+                height: auto;
+                margin-right: 0.5rem;
+                fill: {{ .Params.color }};
+            }
+            ul li a {
+                display: block;
+                padding: 0.5rem;
+                padding-left: 0;
+                margin-bottom: 0.2rem;
+                text-decoration: none;
+                transition: 0.1s;
+            }
+            ul li a:hover {
+                background-color: rgba(0,0,0,0);
+            }
+            .spotify a:hover svg {
+                fill: #1ED760;
+            }
+            .spotify a:hover {
+                color: #1ED760;
+            }
+            .youtube a:hover svg {
+                fill: #FF0000;
+            }
+            .youtube a:hover {
+                color: #FF0000;
+            }
+            .vimeo a:hover svg {
+                fill: #1AB7EA;
+            }
+            .vimeo a:hover {
+                color: #1AB7EA;
+            }
+            .soundcloud a:hover svg {
+                fill: #FF3300;
+            }
+            .soundcloud a:hover {
+                color: #FF3300;
+            }
+            .deezer a:hover svg {
+                fill: #FEAA2D;
+            }
+            .deezer a:hover {
+                color: #FEAA2D;
+            }
+            .pandora a:hover svg {
+                fill: #005483;
+            }
+            .pandora a:hover {
+                color: #005483;
+            }
+            .bandcamp a:hover svg {
+                fill: #408294;
+            }
+            .bandcamp a:hover {
+                color: #408294;
+            }
+            .apple a:hover svg {
+                fill: #FB5BC5;
+            }
+            .apple a:hover {
+                color: #FB5BC5;
+            }
+            .amazon a:hover svg {
+                fill: #FF9900;
+            }
+            .amazon a:hover {
+                color: #FF9900;
+            }
+            .tidal a:hover svg {
+                fill: #ffffff;
+            }
+            .tidal a:hover {
+                color: #ffffff;
+            }
+            .napster a:hover svg {
+                fill: #2068b9;
+            }
+            .napster a:hover {
+                color: #2068b9;
+            }
+            .mx3 a:hover svg {
+                fill: #a52721;
+            }
+            .mx3 a:hover {
+                color: #a52721;
+            }
+            .googleplaymusic a:hover svg {
+                fill: #f75a23;
+            }
+            .googleplaymusic a:hover {
+                color: #f75a23;
+            }
+            .googleplaystore a:hover svg {
+                fill: #00e1ff;
+            }
+            .googleplaystore a:hover {
+                color: #00e1ff;
+            }
+
+            /* Typo */
+            h1 {
+                font-size: 6rem;
+                font-weight: 100;
+                margin-top: 2rem;
+            }
+            h2 {
+                font-size: 2.3rem;
+                font-weight: 300;
+                padding-bottom: 1rem;
+            }
+            h3 {
+                font-size: 2.1rem;
+                font-weight: 400;
+            }
+            p, li {
+                font-size: 2.1rem;
+                font-weight: 300;
+            }
+            a {
+                text-decoration: underline;
+            }
+            a:hover {
+                text-decoration: none;
+            }
+            .linkblock {
+                margin-bottom: 2rem;
+            }
+            #credits p {
+                margin-top: 3rem;
+                text-align: center;
+                font-size: 1rem;
+            }
+            @media (max-width: 768px) {  
+                h1 {
+                    font-size: 4rem
+                }
+                p, li {
+                    font-size: 2rem;
+                }
+            }
+
+            @media (min-width: 540px) {  
+                html {font-size: 20px;}
+            }
+
+            /* Medium devices (tablets, 768px and up) */
+            @media (min-width: 768px) {  
+                html {font-size: 20px;}
+            }
+
+            /* Large devices (desktops, 992px and up) */
+            @media (min-width: 992px) { 
+                /* default anyways */
+                html {font-size: 16px;}
+                p, li {
+                    font-size: 1.7rem;
+                }
+            }
+
+            /* Extra large devices (large desktops, 1200px and up) */
+            @media (min-width: 1200px) {  
+                /* default anyways */
+                html {font-size: 16px;}
+            }
+
+        </style>
+    </head>
+    <body>
+<!--
+        <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+            <iframe frameborder="0" height="100%" width="100%"
+              src="https://youtube.com/embed/{{ .Params.youtubeid }}?autoplay=1&controls=0&showinfo=0&autohide=1">
+            </iframe>
+          </div>
+-->
+        <div id="bg">
+            <img alt="{{ .Title }}" src="{{ .Params.image }}" />
+        </div>
+        <div id="main">
+        {{ block "main" . }}{{ end }}
+        </div>
+<!-- Matomo -->
+<script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+    _paq.push(["setCookieDomain", "*.reelbeetz.ch"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//stats.rimshot.ch/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '14']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img src="//stats.rimshot.ch/matomo.php?idsite=14&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+  <!-- End Matomo Code -->
+    </body>
+</html>
