@@ -1,14 +1,5 @@
-# REEL BEETZ Website
+# reelbeetz.ch
 
-Custom theme for Release (Album/Single/EP/..) landing Pages. For the start page it uses a normal theme.
+Source repo for <https://reelbeetz.ch>
 
-## Develop
-
-```hugo server```
-
-Open the shown url in the browser.
-
-## Build and push to cf (reelbeetz.ch / reelbeetz.scapp.io)
-
-```./cf-publish.sh```
-
+Build with [Hugo](https://gohugo.io).
