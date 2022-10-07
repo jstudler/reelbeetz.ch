@@ -14,7 +14,7 @@ pandora: "https://www.pandora.com/TR:79328932"
 tidal: "https://listen.tidal.com/track/249904743"
 #napster: ""
 #mx3audio: 
-#mx3video: ""
+mx3video: "https://mx3.ch/t/1HYf"
 youtubeid: "alh0F6Y2Irw"
 #vimeo: ""
 bandcamp: "https://reelbeetz.bandcamp.com/track/continuum"
