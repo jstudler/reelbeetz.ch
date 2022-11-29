@@ -3,7 +3,7 @@ title: "Now!"
 date: 2022-11-17T08:00:00+01:00
 layout: release
 draft: false
-release: single
+release: song
 url: "/now"
 image: "/artwork/jay-jules-now.jpg"
 credits: "released November 18th, 2022,

@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://reelbeetz.ch"
 languageCode = "en-us"
 title = "REEL BEETZ"
 theme = "massively"

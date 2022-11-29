@@ -3,7 +3,7 @@ title: "Continuum"
 date: 2022-10-07T00:00:00+01:00
 layout: release
 draft: false
-release: single
+release: song
 url: "/continuum"
 image: "/artwork/reel-beetz-continuum-feat-burni-aman-jay-jules.jpg"
 credits: "produced by Joel Studler, lyrics by Jay Jules & Burni Aman, released October 7th, 2022"

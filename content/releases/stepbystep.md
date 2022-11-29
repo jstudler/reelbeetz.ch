@@ -3,7 +3,7 @@ title: "Step By Step"
 date: 2019-08-02T08:00:00+01:00
 layout: release
 draft: false
-release: single
+release: song
 url: "/stepbystep"
 image: "/artwork/reel-beetz-step-by-step-feat-miss-c-line-arbajo-jairus.jpg"
 credits: "released August 2, 2019,

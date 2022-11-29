@@ -3,7 +3,7 @@ title: "Stand Strong"
 date: 2019-10-11T08:00:00+01:00
 layout: release
 draft: false
-release: single
+release: song
 url: "/standstrong"
 image: "/artwork/reel-beetz-stand-strong-feat-burni-aman-veronikas-ndiigo.jpg"
 credits: "released October 11, 2019,

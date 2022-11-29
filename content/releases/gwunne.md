@@ -3,7 +3,7 @@ title: "Gwunne"
 date: 2020-05-27T00:00:00+01:00
 layout: release
 draft: false
-release: single
+release: song
 url: "/gwunne"
 image: "/artwork/gwunne-feat-weibello.jpg"
 credits: "produced by Joel Studler, lyrics by Weibello, released May 27th, 2020"

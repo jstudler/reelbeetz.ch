@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{{ .Title }}</title>
+        <title>{{ .Title }} - {{ .Site.Title }}</title>
+        <meta name="description" content="{{ .Title }} by {{ .Site.Title }} {{ .Params.credits }}" />
+        <meta property="og:title" content="{{ .Site.Title }}" />
+        <meta property="og:url" content="{{ .Site.BaseURL }}{{ .Params.url }}" />
+        <meta property="og:description" content="{{ .Title }} by {{ .Site.Title }} {{ .Params.credits }}" />
+        <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.image }}" />
+        <meta property="og:type" content="music:{{ .Params.release }}" />
+        <meta name="twitter:site" content="@reelbeetz" />
+        <meta name="twitter:creator" content="@reelbeetz" />
         <link rel="icon" type="image/jpg" href="{{ .Params.image }}" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">

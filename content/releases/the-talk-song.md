@@ -3,7 +3,7 @@ title: "The Talk!"
 date: 2020-04-04T08:00:00+01:00
 layout: release
 draft: false
-release: single
+release: song
 url: "/thetalk"
 image: "/artwork/the-talk-song.jpg"
 credits: "released April 4th, 2020,

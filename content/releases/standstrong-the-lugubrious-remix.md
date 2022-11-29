@@ -3,7 +3,7 @@ title: "Stand Strong"
 date: 2020-02-14T08:00:00+01:00
 layout: release
 draft: false
-release: single
+release: song
 url: "/standstrong-thelugubrious-remix"
 image: "/artwork/reel-beetz-stand-strong-the-lugubrious-remix-feat-burni-aman-veronikas-ndiigo.jpg"
 credits: "released February 21st, 2020,

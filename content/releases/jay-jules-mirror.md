@@ -3,7 +3,7 @@ title: "Mirror"
 date: 2020-02-07T08:00:00+01:00
 layout: release
 draft: false
-release: single
+release: song
 url: "/mirror"
 image: "/artwork/jay-jules-mirror-feat-lilian-salathe-and-reel-beetz.jpg"
 credits: "released February 7, 2020,
