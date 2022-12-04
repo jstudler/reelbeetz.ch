@@ -22,6 +22,7 @@ apple: "https://geo.music.apple.com/ch/album/_/1652761791?i=1652761793&mt=1&app=
 amazonmusic: "https://www.amazon.com/music/player/albums/B0BLFH9PCG"
 amazondownload: "https://www.amazon.com/music/player/albums/B0BLFH9PCG"
 mx3audio: "https://mx3.ch/t/1Iyk"
+bandcamp: "https://jayjules.bandcamp.com/track/now"
 ---
 
 By [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)
