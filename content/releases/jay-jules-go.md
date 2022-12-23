@@ -1,5 +1,5 @@
 ---
-title: "Go (Earth Mix)"
+title: "Go"
 date: 2022-12-23T08:00:00+01:00
 layout: release
 draft: false
@@ -22,7 +22,7 @@ apple: "https://geo.music.apple.com/ch/album/_/1659386689?i=1659386693&mt=1&app=
 amazonmusic: "https://amazon.com/music/player/albums/B0BPPY5NTF"
 amazondownload: "https://amazon.com/music/player/albums/B0BPPY5NTF"
 #mx3audio: ""
-bandcamp: "https://jayjules.bandcamp.com/track/go"
+bandcamp: "https://jayjules.bandcamp.com/track/go-earth-mix"
 ---
 
 By [Jay Jules](https://jayjules.net) featuring [MISS C-LINE](https://instagram.com/missclineofficial), produced by [REEL BEETZ](https://reelbeetz.ch)
