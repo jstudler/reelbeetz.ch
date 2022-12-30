@@ -21,8 +21,9 @@ deezer: "https://www.deezer.com/track/2066796757"
 apple: "https://geo.music.apple.com/ch/album/_/1659618499?i=1659618501&mt=1&app=music&ls=1&at=1000lHKX&ct=odesli_http&itscg=30200&itsct=odsl_m"
 amazonmusic: "https://www.amazon.de/-/en/dp/B0BPTGXVFP/ref=sr_1_1?crid=27CCK1PX1D44A"
 amazondownload: "https://www.amazon.de/-/en/dp/B0BPTGXVFP/ref=sr_1_1?crid=27CCK1PX1D44A"
-#mx3audio: ""
+mx3audio: "https://mx3.ch/t/1J9e"
 bandcamp: "https://reelbeetz.bandcamp.com/track/2twenty2"
+soundcloud: "https://soundcloud.com/reelbeetz/2twenty2-feat-burni-aman-miss-c-line"
 ---
 
 By [James Iwa](https://www.instagram.com/james_iwa/) & [REEL BEETZ](https://reelbeetz.ch/) featuring [Burni Aman](http://www.burniaman.com/) & [MISS C-LINE](https://instagram.com/missclineofficial)
