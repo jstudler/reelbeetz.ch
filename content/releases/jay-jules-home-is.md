@@ -21,8 +21,8 @@ deezer: "https://www.deezer.com/track/2106453487"
 apple: "https://geo.music.apple.com/ch/album/_/1665179252?i=1665179253"
 amazonmusic: "https://amazon.com/dp/B0BS84946S"
 amazondownload: "https://amazon.com/dp/_/B0BS84946S"
-#mx3audio: ""
-#bandcamp: ""
+mx3audio: "https://mx3.ch/t/1K3A"
+bandcamp: "https://jayjules.bandcamp.com/track/home-is"
 ---
 
 By [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)
