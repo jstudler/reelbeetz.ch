@@ -15,7 +15,8 @@ Vocals «Say Why»: TwizzMatic;
 Keys, Bass, Mix assistance: James Iwa;
 Drums, Mix: REEL BEETZ;
 Mastering: Dope Mixes;
-Artwork: Lilian Salathé"
+Artwork: Lilian Salathé;
+Kindly supported by Burgergemeinde Bern & Swisslos Kultur Kanton Bern"
 color: "#f7a6a5"
 spotify: "https://open.spotify.com/album/7BsXO1QOhE1jNq5LC6DK0v"
 youtubeid: "nwBTofc5av4"
