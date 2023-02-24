@@ -6,12 +6,12 @@ draft: false
 release: song
 url: "/2twenty2"
 image: "/artwork/2twenty2.jpg"
-credits: "released December 30th, 2022,
-Vocals: Burni Aman
-Vocals: MISS C-LINE
-Keys, Bass, Mix assistance: James Iwa
-Drums, Mix: REEL BEETZ
-Mastering: Dope Mixes
+credits: "released December 30th, 2022;
+Vocals: Burni Aman;
+Vocals: MISS C-LINE;
+Keys, Bass, Mix assistance: James Iwa;
+Drums, Mix: REEL BEETZ;
+Mastering: Dope Mixes;
 Artwork: Lilian Salathé"
 color: "#5a2679"
 spotify: "https://open.spotify.com/track/15lJszdEaRhvciatebzsZV?si=d7a03e54598d4647"
