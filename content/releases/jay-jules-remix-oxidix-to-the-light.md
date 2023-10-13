@@ -19,7 +19,7 @@ deezer: "https://www.deezer.com/track/2455649925"
 apple: "https://geo.music.apple.com/ch/album/_/1707870657?i=1707870886&mt=1&app=music&ls=1&at=1000lHKX&ct=odesli_http&itscg=30200&itsct=odsl_m"
 amazonmusic: "https://amazon.com/music/player/albums/B0CJ5KMH3X"
 amazondownload: "https://amazon.com/music/player/albums/B0CJ5KMH3X"
-#mx3audio: "https://mx3.ch/t/1J3y"
+mx3audio: "https://mx3.ch/t/1NhZ"
 #bandcamp: "https://jayjules.bandcamp.com/track/go-earth-mix"
 ---
 
