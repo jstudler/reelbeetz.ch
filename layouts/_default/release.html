@@ -11,10 +11,18 @@
                     <img alt="{{ .Title }}" src="{{ .Params.image }}" />
                 </div>
                 {{ if or (isset .Params "youtubeid") }}
-                <div>
+                <div id="youtubevideo">
                     <iframe title="{{ .Title }}" width="560" height="315" src="https://www.youtube.com/embed/{{ .Params.youtubeid }}"
                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
+                </div>
+                {{ end }}
+                {{ if or (isset .Params "spotify") }}
+                <div id="spotifyembed">
+                    <iframe style="border-radius:12px" src="{{ replace .Params.spotify "open.spotify.com" "open.spotify.com/embed" }}"
+                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                    </iframe>
                 </div>
                 {{ end }}
             </div>
