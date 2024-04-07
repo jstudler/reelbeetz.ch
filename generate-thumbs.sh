@@ -1,5 +1,5 @@
 # add the git hook
-# echo 'bash generate-thumbs.sh' > .git/hooks/pre-commit
+# echo 'bash ../../../generate-thumbs.sh' > .git/hooks/pre-commit
 
 rm -rf static/artwork/thumbs
 mkdir -p static/artwork/thumbs
