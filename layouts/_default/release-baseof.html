@@ -6,7 +6,7 @@
         <meta property="og:title" content="{{ .Title }} – {{ .Content | plainify | chomp }}" />
         <meta property="og:url" content="{{ .Site.BaseURL }}{{ .Params.url }}" />
         <meta property="og:description" content="{{ .Title }} – {{ .Content | plainify | chomp }}, listen on Spotify, Apple music, YouTube and more. {{ .Params.credits }}" />
-        <meta property="og:image" content="{{ .Site.BaseURL }}thumbs{{ .Params.image }}" />
+        <meta property="og:image" content="{{ .Site.BaseURL }}/thumbs{{ .Params.image }}" />
         <meta property="og:type" content="music:{{ .Params.release }}" />
         <meta name="twitter:site" content="@reelbeetz" />
         <meta name="twitter:creator" content="@reelbeetz" />
