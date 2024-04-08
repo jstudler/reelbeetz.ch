@@ -37,9 +37,12 @@
                 left: -50%; 
                 width: 200%; 
                 height: 200%;
+                background-color: {{ .Params.color }};
+                filter: brightness(70%);
             }
             #bg img {
-                filter: blur(150px);
+                -webkit-filter: blur(150px);
+                filter: blur(150px) brightness(150%);
 
                 position: absolute; 
                 top: 0; 
