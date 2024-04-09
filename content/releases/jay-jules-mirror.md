@@ -6,6 +6,7 @@ draft: false
 release: song
 url: "/mirror"
 image: "/artwork/jay-jules-mirror-feat-lilian-salathe-and-reel-beetz.jpg"
+hideBackgroundImage: true # maybe change this to "backgroundColor" and don't show image if set...
 credits: "released February 7, 2020,
 Rap, Lyrics, Video Post Production: Jay Jules,
 Vocals, Spoken, Artwork, Video Camera & Light: Lilian Salathé, 

@@ -6,6 +6,7 @@ draft: false
 release: song
 url: "/gwunne"
 image: "/artwork/gwunne-feat-weibello.jpg"
+hideBackgroundImage: true # maybe change this to "backgroundColor" and don't show image if set...
 credits: "produced by Joel Studler, lyrics by Weibello, released May 27th, 2020"
 color: "#d19e73"
 spotify: "https://open.spotify.com/album/6WBSDXCPuSkvcxTaE0RgFg?si=vZ41Z2pdRGyDGckmhT3kgQ"

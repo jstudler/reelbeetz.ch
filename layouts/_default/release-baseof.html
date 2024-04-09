@@ -259,7 +259,9 @@
           </div>
 -->
         <div id="bg">
+            {{ if not .Params.hideBackgroundImage }}
             <img alt="{{ .Title }}" src="{{ .Params.image }}" />
+            {{ end }}
         </div>
         <div id="main">
         {{ block "main" . }}{{ end }}
