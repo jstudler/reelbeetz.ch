@@ -9,12 +9,13 @@ hugo.exe
 hugo.darwin
 hugo.linux
 
-### Code ###
+### IDEs (VS Code, IntelliJ) ###
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.idea/*
 
 ### Vim ###
 # Swap
