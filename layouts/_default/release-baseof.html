@@ -222,10 +222,16 @@
                 p, li {
                     font-size: 2rem;
                 }
+                .mobileonly {
+                    display: block;
+                }
             }
 
             @media (min-width: 540px) {  
                 html {font-size: 20px;}
+                .mobileonly {
+                    display: block;
+                }
             }
 
             /* Medium devices (tablets, 768px and up) */
@@ -233,12 +239,15 @@
                 html {font-size: 20px;}
             }
 
-            /* Large devices (desktops, 992px and up) */
+            /* Large devices (desktops, 992px and up) bootstrap breakpoint for desktop (3 rows) layout */
             @media (min-width: 992px) { 
                 /* default anyways */
                 html {font-size: 16px;}
                 p, li {
                     font-size: 1.7rem;
+                }
+                .mobileonly {
+                    display: none;
                 }
             }
 
