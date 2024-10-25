@@ -25,4 +25,4 @@ mx3audio: "https://mx3.ch/t/1K3A"
 bandcamp: "https://jayjules.bandcamp.com/track/home-is"
 ---
 
-By [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)
+by [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)

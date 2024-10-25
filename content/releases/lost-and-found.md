@@ -26,4 +26,4 @@ bandcamp: "https://reelbeetz.bandcamp.com/track/lost-found"
 soundcloud: "https://soundcloud.com/reelbeetz/lost-found-feat-phase-one"
 ---
 
-By [James Iwa](https://www.instagram.com/james_iwa/) & [REEL BEETZ](https://reelbeetz.ch/) featuring [Phase One](https://www.instagram.com/phaseonemusic/)
+by [James Iwa](https://www.instagram.com/james_iwa/) & [REEL BEETZ](https://reelbeetz.ch/) featuring [Phase One](https://www.instagram.com/phaseonemusic/)

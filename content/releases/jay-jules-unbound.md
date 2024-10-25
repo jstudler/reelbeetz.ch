@@ -28,4 +28,4 @@ bandcamp: "https://jayjules.bandcamp.com/track/unbound"
 #soundcloud: "https://soundcloud.com/jayjulesnet/"
 ---
 
-By [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)
+by [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)

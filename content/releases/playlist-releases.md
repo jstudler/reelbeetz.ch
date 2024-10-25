@@ -26,4 +26,4 @@ apple: "https://music.apple.com/us/artist/reel-beetz/1127825665"
 #googleplaystore: ""
 ---
 
-By [REEL BEETZ](https://reelbeetz.ch)
+by [REEL BEETZ](https://reelbeetz.ch)

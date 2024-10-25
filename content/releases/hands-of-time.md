@@ -31,4 +31,4 @@ bandcamp: "https://reelbeetz.bandcamp.com/album/hands-of-time"
 soundcloud: "https://soundcloud.com/reelbeetz/sets/hands-of-time"
 ---
 
-By [James Iwa](https://www.instagram.com/james_iwa/) & [REEL BEETZ](https://reelbeetz.ch/)
+by [James Iwa](https://www.instagram.com/james_iwa/) & [REEL BEETZ](https://reelbeetz.ch/)

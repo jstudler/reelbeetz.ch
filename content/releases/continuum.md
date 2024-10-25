@@ -26,4 +26,4 @@ googleplaymusic: "https://music.youtube.com/watch?v=qHOqzy5h0yc"
 #googleplaystore: ""
 ---
 
-By [Burni Aman](http://www.burniaman.com/), [Jay Jules](https://jayjules.net/) & [REEL BEETZ](https://reelbeetz.ch)
+by [Burni Aman](http://www.burniaman.com/), [Jay Jules](https://jayjules.net/) & [REEL BEETZ](https://reelbeetz.ch)

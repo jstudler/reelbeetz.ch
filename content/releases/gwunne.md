@@ -27,4 +27,4 @@ amazondownload: "https://amazon.com/dp/B088KT7Z4S?tag=songlink0d-20"
 googleplaystore: "https://play.google.com/store/music/album/REEL_BEETZ_Gwunne?id=Bgs3bkwglikgt77czdybtyq3zzy"
 ---
 
-By [Weibello](https://www.weibello.ch/) & [REEL BEETZ](https://reelbeetz.ch)
+by [Weibello](https://www.weibello.ch/) & [REEL BEETZ](https://reelbeetz.ch)

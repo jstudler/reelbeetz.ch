@@ -24,4 +24,4 @@ amazonmusic: "https://music.amazon.com/albums/B084JN685M?trackAsin=B084JQYYG7&do
 amazondownload: "https://amazon.com/dp/B084JQYYG7?tag=songlink0d-20"
 ---
 
-By [Jay Jules](https://jayjules.net) featuring [Lilian Salathé](http://liliansalathe.ch), produced by [REEL BEETZ](https://reelbeetz.ch)
+by [Jay Jules](https://jayjules.net) featuring [Lilian Salathé](http://liliansalathe.ch), produced by [REEL BEETZ](https://reelbeetz.ch)

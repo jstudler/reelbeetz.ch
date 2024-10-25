@@ -24,4 +24,4 @@ mx3audio: "https://mx3.ch/t/1J3y"
 bandcamp: "https://jayjules.bandcamp.com/track/go-earth-mix"
 ---
 
-By [Jay Jules](https://jayjules.net) featuring [MISS C-LINE](https://instagram.com/missclineofficial), produced by [REEL BEETZ](https://reelbeetz.ch)
+by [Jay Jules](https://jayjules.net) featuring [MISS C-LINE](https://instagram.com/missclineofficial), produced by [REEL BEETZ](https://reelbeetz.ch)

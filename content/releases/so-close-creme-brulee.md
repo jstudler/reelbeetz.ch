@@ -24,5 +24,5 @@ bandcamp: "https://reelbeetz.bandcamp.com/track/creme-brulee"
 soundcloud: "https://soundcloud.com/reelbeetz/creme-brulee-feat-miss-c-line"
 ---
 
-By [REEL BEETZ](https://reelbeetz.ch/) featuring [MISS C-LINE](https://instagram.com/missclineofficial)
+by [REEL BEETZ](https://reelbeetz.ch/) featuring [MISS C-LINE](https://instagram.com/missclineofficial)
 

@@ -24,4 +24,4 @@ mx3audio: "https://mx3.ch/t/1Iyk"
 bandcamp: "https://jayjules.bandcamp.com/track/now"
 ---
 
-By [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)
+by [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)

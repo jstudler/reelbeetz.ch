@@ -26,4 +26,4 @@ googleplaymusic: "https://play.google.com/music/m/Trnjoxasrsvrwlbs2juxbl2li2i?si
 googleplaystore: "https://play.google.com/store/music/album/REEL_BEETZ_The_Talk_Mixtape_2020_Live?id=Bgjn2nleplr3v266rcudae3zxuq"
 ---
 
-By [The Talk!](https://thetalk.ch)
+by [The Talk!](https://thetalk.ch)

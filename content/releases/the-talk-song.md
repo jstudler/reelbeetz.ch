@@ -26,4 +26,4 @@ googleplaymusic: "https://play.google.com/music/m/Trnjoxasrsvrwlbs2juxbl2li2i?si
 googleplaystore: "https://play.google.com/store/music/album?id=Bbjeb2sfxomotfymc56xvvlcazu&tid=song-Trnjoxasrsvrwlbs2juxbl2li2i"
 ---
 
-By [The Talk!](https://thetalk.ch), [MC Juli](https://www.mcjuli.net), [nisl](http://nisl.ch), [Miss C-Line](https://www.instagram.com/or.v.c), [Jay Jules](https://www.instagram.com/jayjulesnet), [PeWe & Don](https://www.instagram.com/pewe8don/)
+by [The Talk!](https://thetalk.ch), [MC Juli](https://www.mcjuli.net), [nisl](http://nisl.ch), [Miss C-Line](https://www.instagram.com/or.v.c), [Jay Jules](https://www.instagram.com/jayjulesnet), [PeWe & Don](https://www.instagram.com/pewe8don/)

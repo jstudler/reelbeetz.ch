@@ -25,5 +25,5 @@ apple: "https://music.apple.com/ch/album/dm-single/1771436071"
 # soundcloud: ""
 ---
 
-By [REEL BEETZ](https://reelbeetz.ch/) featuring [Saimon Disko](https://www.instagram.com/saimondisko/)
+by [REEL BEETZ](https://reelbeetz.ch/) featuring [Saimon Disko](https://www.instagram.com/saimondisko/)
 

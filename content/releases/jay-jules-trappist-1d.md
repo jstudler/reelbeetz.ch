@@ -39,4 +39,4 @@ mx3audio: "https://mx3.ch/jayjules"
 bandcamp: "https://jayjules.bandcamp.com/album/trappist-1d"
 ---
 
-By [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)
+by [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)

@@ -26,4 +26,4 @@ mx3audio: "https://mx3.ch/t/1JqQ"
 bandcamp: "https://jayjules.bandcamp.com/track/today-is-ok-earth-mix"
 ---
 
-By [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)
+by [Jay Jules](https://jayjules.net), produced by [REEL BEETZ](https://reelbeetz.ch)

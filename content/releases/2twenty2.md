@@ -26,4 +26,4 @@ bandcamp: "https://reelbeetz.bandcamp.com/track/2twenty2"
 soundcloud: "https://soundcloud.com/reelbeetz/2twenty2-feat-burni-aman-miss-c-line"
 ---
 
-By [James Iwa](https://www.instagram.com/james_iwa/) & [REEL BEETZ](https://reelbeetz.ch/) featuring [Burni Aman](http://www.burniaman.com/) & [MISS C-LINE](https://instagram.com/missclineofficial)
+by [James Iwa](https://www.instagram.com/james_iwa/) & [REEL BEETZ](https://reelbeetz.ch/) featuring [Burni Aman](http://www.burniaman.com/) & [MISS C-LINE](https://instagram.com/missclineofficial)

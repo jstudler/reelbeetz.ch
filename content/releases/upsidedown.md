@@ -36,5 +36,5 @@ googleplaymusic: "https://play.google.com/music/m/Beadqkndoh6jmlqf53jdcw2gz2a?si
 googleplaystore: "https://play.google.com/store/music/album?id=Beadqkndoh6jmlqf53jdcw2gz2a"
 ---
 
-By [REEL BEETZ](https://reelbeetz.ch) featuring [Sa Mood](http://www.samood.ch) & Possibility
+by [REEL BEETZ](https://reelbeetz.ch) featuring [Sa Mood](http://www.samood.ch) & Possibility
 

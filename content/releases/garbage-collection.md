@@ -26,4 +26,4 @@ googleplaymusic: "https://music.youtube.com/playlist?list=OLAK5uy_ls2I-U2LNyLKR7
 #googleplaystore: ""
 ---
 
-By [REEL BEETZ](https://reelbeetz.ch)
+by [REEL BEETZ](https://reelbeetz.ch)

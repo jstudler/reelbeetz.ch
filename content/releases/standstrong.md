@@ -29,4 +29,4 @@ googleplaymusic: "https://play.google.com/music/m/Tbhvoavj7q3ppxrz6nujvte7noe?si
 googleplaystore: "https://play.google.com/store/music/album?id=Bdvjcs6rgxwa3teuysftrloniwy&tid=song-Tbhvoavj7q3ppxrz6nujvte7noe"
 ---
 
-By [REEL BEETZ](https://reelbeetz.ch) featuring [Burni Aman](http://www.burniaman.com) & [Veronika's NDIIGO](http://www.veronikastalder.ch)
+by [REEL BEETZ](https://reelbeetz.ch) featuring [Burni Aman](http://www.burniaman.com) & [Veronika's NDIIGO](http://www.veronikastalder.ch)

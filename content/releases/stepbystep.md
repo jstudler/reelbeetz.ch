@@ -29,4 +29,4 @@ googleplaymusic: "https://play.google.com/music/m/Tptnsw6iav22tuphekmpufaj3qm?si
 googleplaystore: "https://play.google.com/store/music/album?id=B6shagn5yjkxghbnbsn63iabahy&tid=song-Tptnsw6iav22tuphekmpufaj3qm"
 ---
 
-By [REEL BEETZ](https://reelbeetz.ch) featuring [Miss C-Line](https://www.instagram.com/or.v.c) & [Arbajo Jairus](https://www.instagram.com/arbajo.j)
+by [REEL BEETZ](https://reelbeetz.ch) featuring [Miss C-Line](https://www.instagram.com/or.v.c) & [Arbajo Jairus](https://www.instagram.com/arbajo.j)
