@@ -22,9 +22,9 @@ deezer: "https://www.deezer.com/track/3086364861"
 apple: "https://geo.music.apple.com/ch/album/_/1779064325?i=1779064326&mt=1&app=music&ls=1&at=1000lHKX&ct=odesli_http&itscg=30200&itsct=odsl_m"
 amazonmusic: "https://music.amazon.com/albums/B0DMP79T2W?trackAsin=B0DMP79T2W"
 amazondownload: "https://music.amazon.com/albums/B0DMP79T2W?trackAsin=B0DMP79T2W"
-# mx3audio: "https://mx3.ch/t/1SFE"
-# bandcamp: "https://reelbeetz.bandcamp.com/track/creme-brulee"
-# soundcloud: "https://soundcloud.com/reelbeetz/creme-brulee-feat-miss-c-line"
+mx3audio: "https://mx3.ch/t/1TyJ"
+bandcamp: "https://reelbeetz.bandcamp.com/track/you-are-the-one"
+soundcloud: "https://soundcloud.com/reelbeetz/you-are-the-one"
 ---
 
 by [REEL BEETZ](https://reelbeetz.ch/), [MISS C-LINE](https://instagram.com/missclineofficial) & [James Iwa](https://www.instagram.com/james_iwa/)
