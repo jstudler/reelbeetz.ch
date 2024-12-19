@@ -10,7 +10,7 @@ credits: "released November 29th, 2024;
 Vocals: MISS C-LINE;
 Bass: James Iwa;
 Keyboards: Kenny Niggli;
-Production, Drums, Percussion, Synth Bass, Piano, Keyboards, Mix: Joel Studler aka REEL BEETZ;
+Production, Drums, Percussion, Mix: Joel Studler aka REEL BEETZ;
 Mastering: Dope Mixes;
 Artwork: Lilian Salathé"
 color: "#d5e8cc"
