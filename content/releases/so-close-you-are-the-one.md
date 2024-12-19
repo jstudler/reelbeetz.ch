@@ -6,7 +6,7 @@ draft: false
 release: song
 url: "/you-are-the-one"
 image: "/artwork/so-close-you-are-the-one.jpg"
-credits: "released September 27th, 2024;
+credits: "released November 29th, 2024;
 Vocals: MISS C-LINE;
 Bass: James Iwa;
 Keyboards: Kenny Niggli;
