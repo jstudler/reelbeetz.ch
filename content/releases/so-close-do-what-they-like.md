@@ -23,9 +23,9 @@ deezer: "https://www.deezer.com/track/3140306731"
 apple: "https://geo.music.apple.com/ch/album/_/1785015364?i=1785015368&mt=1&app=itunes&ls=1&at=1000lHKX&ct=odesli_http&itscg=30200&itsct=odsl_m"
 amazonmusic: "https://music.amazon.com/albums/B0DQ9B7F3J?trackAsin=B0DQ9C42NV"
 amazondownload: "https://music.amazon.com/albums/B0DQ9B7F3J?trackAsin=B0DQ9C42NV"
-#mx3audio: "https://mx3.ch/t/1TyJ"
-#bandcamp: "https://reelbeetz.bandcamp.com/track/you-are-the-one"
-#soundcloud: "https://soundcloud.com/reelbeetz/you-are-the-one"
+mx3audio: "https://mx3.ch/t/1Ulu"
+bandcamp: "https://reelbeetz.bandcamp.com/track/do-what-they-like"
+soundcloud: "https://soundcloud.com/reelbeetz/do-what-they-like-feat-anne-nangole"
 ---
 
 by [REEL BEETZ](https://reelbeetz.ch/) & [Anne Nang'ole](https://instagram.com/annenangole)
