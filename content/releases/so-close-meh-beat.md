@@ -21,9 +21,9 @@ deezer: "https://www.deezer.com/track/3216882721"
 apple: "https://geo.music.apple.com/ch/album/_/1794303254?i=1794303589&mt=1&app=music&ls=1"
 amazonmusic: "https://music.amazon.com/albums/B0DVZGVC9F?trackAsin=B0DVZFMJMK"
 amazondownload: "https://music.amazon.com/albums/B0DVZGVC9F?trackAsin=B0DVZFMJMK"
-# mx3audio: "https://mx3.ch/t/__________"
-# bandcamp: "https://reelbeetz.bandcamp.com/track/__________"
-# soundcloud: "https://soundcloud.com/reelbeetz/__________"
+mx3audio: "https://mx3.ch/t/1VkE"
+bandcamp: "https://reelbeetz.bandcamp.com/track/meh-beat"
+soundcloud: "https://soundcloud.com/reelbeetz/meh-beat-feat-tommy-vercetti"
 ---
 
 by [REEL BEETZ](https://reelbeetz.ch/) & [Tommy Vercetti](https://www.tommyvercetti.ch)
