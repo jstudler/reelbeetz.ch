@@ -22,7 +22,7 @@ deezer: "https://www.deezer.com/track/3264118021"
 apple: "https://geo.music.apple.com/ch/album/_/1800145942?i=1800145944&mt=1&app=music&ls=1"
 amazonmusic: "https://music.amazon.com/albums/B0DZ76H4NQ?trackAsin=B0DZ7814MW"
 amazondownload: "https://music.amazon.com/albums/B0DZ76H4NQ?trackAsin=B0DZ7814MW"
-# mx3audio: "https://mx3.ch/t/1VkE"
+mx3audio: "https://mx3.ch/t/1VN1"
 # bandcamp: "https://reelbeetz.bandcamp.com/track/meh-beat"
 # soundcloud: "https://soundcloud.com/reelbeetz/meh-beat-feat-tommy-vercetti"
 ---
