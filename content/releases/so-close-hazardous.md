@@ -22,9 +22,9 @@ deezer: "https://www.deezer.com/track/3303931661"
 apple: "https://geo.music.apple.com/cv/album/_/1805875038?i=1805875461&mt=1&app=music&ls=1"
 amazonmusic: "https://music.amazon.com/albums/B0F38MNW4K?trackAsin=B0F38MSZ1N"
 amazondownload: "https://music.amazon.com/albums/B0F38MNW4K?trackAsin=B0F38MSZ1N"
-# mx3audio: "https://mx3.ch/t/1VN1"
-# bandcamp: "https://reelbeetz.bandcamp.com/track/kalibriert"
-# soundcloud: "https://soundcloud.com/reelbeetz/kalibriert-feat-z-the-freshman"
+mx3audio: "https://mx3.ch/t/1WcG"
+bandcamp: "https://reelbeetz.bandcamp.com/track/hazardous"
+soundcloud: "https://soundcloud.com/reelbeetz/hazardous-feat-svmthox"
 ---
 
 by [REEL BEETZ](https://reelbeetz.ch/) & [svmthoX](https://www.instagram.com/svmthox/)
