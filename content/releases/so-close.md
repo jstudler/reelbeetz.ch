@@ -24,9 +24,9 @@ deezer: "https://www.deezer.com/track/3303931661"
 # apple: "https://geo.music.apple.com/cv/album/_/1805875038?i=1805875461&mt=1&app=music&ls=1"
 amazonmusic: "https://amazon.com/dp/B0F67J9TW5"
 amazondownload: "https://amazon.com/dp/B0F67J9TW5"
-# mx3audio: "https://mx3.ch/t/1WcG"
-# bandcamp: "https://reelbeetz.bandcamp.com/track/hazardous"
-# soundcloud: "https://soundcloud.com/reelbeetz/hazardous-feat-svmthox"
+mx3audio: "https://mx3.ch/reelbeetz"
+bandcamp: "https://reelbeetz.bandcamp.com/album/so-close"
+soundcloud: "https://soundcloud.com/reelbeetz/sets/so-close"
 ---
 
 by [REEL BEETZ](https://reelbeetz.ch/) featuring [Saimon Disko](https://www.instagram.com/saimondisko/), [MISS C-LINE](https://instagram.com/missclineofficial), [James Iwa](https://www.instagram.com/james_iwa/), [Anne Nang'ole](https://instagram.com/annenangole), [Nisl](https://nisl.ch/), [PeWe](https://www.instagram.com/pewe.ruumstylez/), [Tommy Vercetti](https://www.tommyvercetti.ch), [Z The Freshman](https://www.instagram.com/zthefreshman/), [svmthoX](https://www.instagram.com/svmthox/)
