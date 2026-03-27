@@ -7,7 +7,7 @@ release: song
 url: "/original-flavour"
 image: "/artwork/robert-solt-reel-beetz-original-flavour.jpg"
 credits: "released March 27th, 2026; 
-Saxaphone, Flute, Keyboards, Bass: Robert Solt; 
+Saxophone, Flute, Keyboards, Bass: Robert Solt; 
 Production, Drums, Percussion, Keyboards, Mix: Joel Studler aka REEL BEETZ; Mastering: Dope Mixes;
 Artwork: Michael Altorfer"
 color: "#ed7f40"
