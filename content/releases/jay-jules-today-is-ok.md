@@ -12,7 +12,7 @@ Executive Production, Production, Lyrics, Composition, Mix, Drums, Sampling, Bas
 Executive Production, Production, Lyrics, Composition, Vocals, Sampling, Bass, Keys, Guitars, Percussion: Jay Jules;
 Guitar: David Friedli;
 Mastering: Slade Templeton"
-color: "#7fc1b7"
+# color: "#7fc1b7"
 color: "#ebd499"
 spotify: "https://open.spotify.com/track/5r9zpfB0ktoOj0sY9bKuaR?si=0d29491fd80e492a"
 youtubeid: "dhDSG-_Cuf4"

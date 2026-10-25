@@ -25,7 +25,7 @@ William Bejedi & Simon den Otter (Herzhaft) – Promotion;
 Ivan (Midnight Rush) – strategic input;
 Lilian Salathé – visual & friendly input;
 Friends & Family for constructive feedback and constant support"
-color: "#7fc1b7"
+# color: "#7fc1b7"
 color: "#ebd499"
 spotify: "https://open.spotify.com/album/4BYqq4ZGF3JUJdiuqoWIQU?si=tpWh5li_TUealSsp1MlPGg"
 youtubeid: "hJ_9hzLykxU"

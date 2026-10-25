@@ -13,7 +13,7 @@ Executive Production, Production, Lyrics, Composition, Vocals, Sampling, Bass, K
 Guitar: David Friedli;
 Bass: James Iwa;
 Mastering: Slade Templeton"
-color: "#7fc1b7"
+# color: "#7fc1b7"
 color: "#ebd499"
 spotify: "https://open.spotify.com/track/5UBvinYIxIVjWaVnDEbaff"
 youtubeid: "zrz0gzdeRb0"
