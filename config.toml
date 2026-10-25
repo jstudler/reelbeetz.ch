@@ -1,10 +1,18 @@
 baseURL = "https://reelbeetz.ch"
-languageCode = "en-us"
+locale = "en-us"
 title = "REEL BEETZ"
-theme = "massively"
+
+[module]
+  [[module.imports]]
+    path = "github.com/curtiscde/hugo-theme-massively"
+
 [params]
-favicon = "reel-beetz-favicon.png"
+favicon = "/reel-beetz-favicon.png"
 ignoreFiles = [ ".DS_Store" ]
+
+[params.posts]
+  folderName = "releases"
+
 [taxonomies]
   tag = ""
   group = ""
