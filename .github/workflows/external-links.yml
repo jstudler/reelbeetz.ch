@@ -1,0 +1,72 @@
+name: External links
+
+# External links (Spotify, Apple Music, Instagram, ...) rot slowly and the
+# hosts throttle CI runners, so they are checked on a schedule instead of on
+# every push, where flaky failures would just train everyone to ignore CI.
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  # Keep in sync with .github/workflows/ci.yml.
+  HUGO_VERSION: 0.168.0
+
+jobs:
+  external-links:
+    name: Check external links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Go
+        uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+
+      - name: Cache Hugo modules
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/hugo_cache
+          key: hugo-modules-${{ hashFiles('go.sum') }}
+          restore-keys: hugo-modules-
+
+      - name: Install Hugo extended
+        run: |
+          curl -fsSL -o "${RUNNER_TEMP}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+
+      - name: Build site
+        run: hugo --gc --minify
+
+      # --root-dir is required for the root-relative links (/about, /assets/...)
+      # that Hugo emits, otherwise lychee flags every one of them as an error
+      # (259 errors instead of 32 when it is missing).
+      #
+      # Accepted codes: 403/429 because music and social platforms block or
+      # throttle datacenter IPs, 503 because Amazon answers it intermittently
+      # for URLs that work on retry, 999 for LinkedIn-style blocking. A
+      # genuinely dead link answers 404 and still fails the run.
+      #
+      # formspree.io is the contact form endpoint and accepts POST only, so a
+      # GET correctly returns 405.
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --no-ignore
+            --root-dir ${{ github.workspace }}/public
+            --max-retries 3
+            --timeout 30
+            --accept '200,206,403,429,503,999'
+            --exclude '^https?://(localhost|127\.0\.0\.1)'
+            --exclude '^https://formspree\.io'
+            './public/**/*.html'
+          fail: true
+          jobSummary: true

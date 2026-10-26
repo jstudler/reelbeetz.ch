@@ -1,0 +1,106 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Keep in sync with the Hugo version used locally. Dependabot bumps the
+  # `uses:` versions below but not this value, so raise it by hand.
+  HUGO_VERSION: 0.168.0
+
+jobs:
+  build:
+    name: Build site and check internal links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      # The Massively theme is a Hugo Module, so building needs a Go toolchain.
+      - name: Set up Go
+        uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+
+      - name: Cache Hugo modules
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/hugo_cache
+          key: hugo-modules-${{ hashFiles('go.sum') }}
+          restore-keys: hugo-modules-
+
+      - name: Install Hugo extended
+        run: |
+          curl -fsSL -o "${RUNNER_TEMP}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+          hugo version
+
+      - name: Build site
+        run: |
+          set -o pipefail
+          hugo --gc --minify 2>&1 | tee "${RUNNER_TEMP}/hugo-build.log"
+
+      - name: Fail on new Hugo warnings
+        run: .github/scripts/check-hugo-warnings.sh "${RUNNER_TEMP}/hugo-build.log"
+
+      # Internal links are absolute (they carry baseURL), so they are only
+      # checkable when the site is rebuilt for, and served from, localhost.
+      - name: Rebuild site for link checking
+        run: hugo --gc --minify --baseURL "http://localhost:8080/"
+
+      - name: Serve site
+        run: |
+          python3 -m http.server 8080 --directory public &
+          for _ in $(seq 30); do
+            if curl -fs -o /dev/null http://localhost:8080/; then
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "Local server did not come up." >&2
+          exit 1
+
+      # public/ is gitignored, hence --no-ignore. The exclude drops every host
+      # containing a dot, which leaves exactly the localhost links.
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --no-ignore
+            --base-url http://localhost:8080
+            --max-retries 2
+            --exclude '^https?://[^/]*\.'
+            './public/**/*.html'
+          fail: true
+
+  thumbnails:
+    name: Thumbnail sizes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Check thumbnail sizes
+        run: .github/scripts/check-thumb-sizes.sh
+
+  shellcheck:
+    name: Shell scripts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Run shellcheck
+        run: shellcheck generate-thumbs.sh .github/scripts/*.sh

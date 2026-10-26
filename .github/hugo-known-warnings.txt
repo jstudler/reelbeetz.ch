@@ -1,0 +1,12 @@
+# Hugo warnings that are known, accepted and therefore do not fail CI.
+# Everything else makes the build job fail, so new warnings get noticed.
+# Each non-comment line is matched as a fixed substring against WARN lines.
+#
+# 1. /releases is served by content/releases/playlist-releases.md (url: "/releases"),
+#    so Hugo's generated section page has no template. Adding one would collide on
+#    public/releases/index.html.
+found no layout file for "html" for kind "section"
+# 2. The Massively theme calls toCSS (libsass) in layouts/_partials/htmlhead.html.
+#    Moving to Dart Sass needs the binary installed locally and in CI, plus
+#    silencing the theme's 40 @import deprecations. Tracked upstream.
+deprecated: css.Sass: libsass was deprecated
