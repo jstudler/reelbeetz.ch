@@ -1,0 +1,77 @@
+{{- /*
+  release/services.html — the single source of truth for every outbound link
+  of a release page. Context: the release page.
+
+  Returns a slice of maps so that any layout can render the very same set of
+  links in its own markup without duplicating front matter lookups:
+
+    key   CSS hook / brand class (matches the brand colour rules in the CSS)
+    icon  key understood by release/icon.html
+    name  visible label
+    url   absolute target
+    group "listen" | "watch" | "download"
+*/ -}}
+{{- $p := . -}}
+{{- $s := slice -}}
+
+{{- /* ---------------------------------------------------------- Listen */ -}}
+{{- with $p.Params.spotify -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "spotify" "icon" "spotify" "name" "Spotify" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.apple -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "apple" "icon" "apple-music" "name" "Apple Music" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.mx3audio -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "mx3" "icon" "mx3" "name" "mx3" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.youtubeid -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "youtube" "icon" "youtube" "name" "YouTube Music" "url" (printf "https://music.youtube.com/watch?v=%s" .)) -}}
+{{- end -}}
+{{- with $p.Params.soundcloud -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "soundcloud" "icon" "soundcloud" "name" "SoundCloud" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.googleplaymusic -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "googleplaymusic" "icon" "googleplaymusic" "name" "Google Play Music" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.deezer -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "deezer" "icon" "deezer" "name" "Deezer" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.pandora -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "pandora" "icon" "pandora" "name" "Pandora" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.amazonmusic -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "amazon" "icon" "amazon" "name" "Amazon Music" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.tidal -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "tidal" "icon" "tidal" "name" "Tidal" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.napster -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "napster" "icon" "napster" "name" "Napster" "url" .) -}}
+{{- end -}}
+
+{{- /* ----------------------------------------------------------- Watch */ -}}
+{{- with $p.Params.youtubeid -}}
+  {{- $s = $s | append (dict "group" "watch" "key" "youtube" "icon" "youtube" "name" "YouTube" "url" (printf "https://www.youtube.com/watch?v=%s" .)) -}}
+{{- end -}}
+{{- with $p.Params.vimeo -}}
+  {{- $s = $s | append (dict "group" "watch" "key" "vimeo" "icon" "vimeo" "name" "Vimeo" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.mx3video -}}
+  {{- $s = $s | append (dict "group" "watch" "key" "mx3" "icon" "mx3" "name" "mx3" "url" .) -}}
+{{- end -}}
+
+{{- /* -------------------------------------------------------- Download */ -}}
+{{- with $p.Params.bandcamp -}}
+  {{- $s = $s | append (dict "group" "download" "key" "bandcamp" "icon" "bandcamp" "name" "Bandcamp" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.apple -}}
+  {{- $s = $s | append (dict "group" "download" "key" "apple" "icon" "apple-itunes" "name" "iTunes" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.amazondownload -}}
+  {{- $s = $s | append (dict "group" "download" "key" "amazon" "icon" "amazon" "name" "Amazon" "url" .) -}}
+{{- end -}}
+{{- with $p.Params.googleplaystore -}}
+  {{- $s = $s | append (dict "group" "download" "key" "googleplaystore" "icon" "googleplaystore" "name" "Google Play Store" "url" .) -}}
+{{- end -}}
+
+{{- return $s -}}

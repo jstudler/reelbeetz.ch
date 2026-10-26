@@ -17,3 +17,16 @@ ignoreFiles = [ ".DS_Store" ]
   tag = ""
   group = ""
   category = ""
+
+# The release layouts read the artwork through the assets pipeline so Hugo can
+# resize it and extract its dominant colours (`.Colors`). Artwork lives in
+# static/, which is not an asset source by default, so mount it as one. Declaring
+# any mount with target "assets" replaces the default assets mount, hence both
+# entries are needed.
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+
+[[module.mounts]]
+  source = "static"
+  target = "assets"

@@ -1,0 +1,15 @@
+{{- $pal := partialCached "release/palette.html" . .RelPermalink -}}
+{{- $css := slice
+      (resources.Get "css/release-brands.css")
+      (resources.Get "css/release-card.css")
+    | resources.Concat "css/release-card.bundle.css" | minify | fingerprint -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang | default "en" }}" style="{{ $pal.style | safeCSS }}">
+<head>
+{{ partial "release/head.html" (dict "page" . "palette" $pal "css" $css) }}
+</head>
+<body class="rc-body">
+{{ block "main" . }}{{ end }}
+{{ partial "release/analytics.html" . }}
+</body>
+</html>

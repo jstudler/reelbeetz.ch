@@ -1,0 +1,25 @@
+{{- /*
+  release/embeds.html — the YouTube and Spotify players.
+  Context: the release page. Aspect ratios are handled in CSS so the iframes
+  stay responsive on every breakpoint.
+*/ -}}
+{{- $p := . -}}
+{{- with $p.Params.youtubeid }}
+<div class="embed embed--video" id="youtubevideo">
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}"
+          title="{{ $p.Title }} – video"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+</div>
+{{- end }}
+{{- with $p.Params.spotify }}
+<div class="embed embed--audio" id="spotifyembed">
+  <iframe src="{{ replace . "open.spotify.com" "open.spotify.com/embed" }}"
+          title="{{ $p.Title }} – Spotify player"
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
+{{- end }}

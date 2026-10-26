@@ -1,0 +1,20 @@
+{{- /*
+  release/luminance.html — relative luminance (0 = black, 1 = white) of a hex
+  colour. Context: a hex string such as "#67c8f2", "#fff" or "67c8f2".
+
+  Used to decide whether a release's accent colour is readable on the dark
+  artwork background, which several releases (#000000, #111111, …) are not.
+*/ -}}
+{{- $hex := . | default "#000000" | strings.TrimPrefix "#" | lower -}}
+{{- if eq (len $hex) 3 -}}
+  {{- $hex = printf "%s%s%s%s%s%s" (substr $hex 0 1) (substr $hex 0 1) (substr $hex 1 1) (substr $hex 1 1) (substr $hex 2 1) (substr $hex 2 1) -}}
+{{- end -}}
+{{- $lum := 0.0 -}}
+{{- if eq (len $hex) 6 -}}
+  {{- $n := dict "0" 0 "1" 1 "2" 2 "3" 3 "4" 4 "5" 5 "6" 6 "7" 7 "8" 8 "9" 9 "a" 10 "b" 11 "c" 12 "d" 13 "e" 14 "f" 15 -}}
+  {{- $r := add (mul 16 (index $n (substr $hex 0 1) | default 0)) (index $n (substr $hex 1 1) | default 0) -}}
+  {{- $g := add (mul 16 (index $n (substr $hex 2 1) | default 0)) (index $n (substr $hex 3 1) | default 0) -}}
+  {{- $b := add (mul 16 (index $n (substr $hex 4 1) | default 0)) (index $n (substr $hex 5 1) | default 0) -}}
+  {{- $lum = div (add (add (mul 0.2126 $r) (mul 0.7152 $g)) (mul 0.0722 $b)) 255.0 -}}
+{{- end -}}
+{{- return $lum -}}

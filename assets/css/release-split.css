@@ -1,0 +1,380 @@
+/* ==========================================================================
+   Design 1 — "Split Stage"            layout: release_split
+   Inspired by the iMusician smart link.
+
+   Structure
+     .rs            CSS grid shell
+     .rs__stage     artwork stage (blurred artwork + dominant-colour mesh)
+     .rs__panel     light panel: players, service rows, credits
+
+   Breakpoints
+     < 768px    single column, artwork hero + full-width sheet
+     768–1023   single column, wider sheet, two-column service rows
+     >= 1024px  two panes side by side, stage fixed, panel scrolls
+   ========================================================================== */
+
+:root {
+  --rs-panel: #eceef1;
+  --rs-panel-ink: #14161a;
+  --rs-panel-muted: #6b7280;
+  --rs-panel-line: rgba(20, 22, 26, 0.09);
+  --rs-radius: 14px;
+  --rs-stage-ink: #ffffff;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body.rs-body {
+  margin: 0;
+  background: #0b0c10;
+  color: var(--rs-stage-ink);
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; }
+
+/* ---------------------------------------------------------------- shell -- */
+
+.rs {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* ---------------------------------------------------------------- stage -- */
+
+.rs__stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(2.5rem, 9vw, 5rem) clamp(1.25rem, 5vw, 3rem) clamp(3rem, 9vw, 5rem);
+  text-align: center;
+}
+
+/* Blurred artwork. A 48px-wide WebP is scaled up, which is both cheaper and
+   smoother than blurring the 3000px original in the browser. */
+.rs__stage::before {
+  content: "";
+  position: absolute;
+  inset: -15%;
+  z-index: -2;
+  background-image: var(--canvas);
+  background-size: cover;
+  background-position: center;
+  filter: blur(42px) saturate(1.45);
+  transform: scale(1.15);
+}
+
+/* Dominant-colour mesh on top, so pages with `hideBackgroundImage` (where
+   --canvas is `none`) still get a background built from the artwork palette. */
+.rs__stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(70% 55% at 18% 12%, color-mix(in srgb, var(--art-5) 60%, transparent), transparent 72%),
+    radial-gradient(60% 50% at 86% 80%, color-mix(in srgb, var(--art-3) 55%, transparent), transparent 70%),
+    radial-gradient(90% 70% at 50% 110%, color-mix(in srgb, var(--art-1) 80%, transparent), transparent 75%),
+    linear-gradient(180deg, rgba(8, 9, 12, calc(0.2 + 0.5 * var(--scrim, 0.35))), rgba(8, 9, 12, calc(0.55 + 0.4 * var(--scrim, 0.35))));
+}
+
+.rs__stage-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  width: 100%;
+  max-width: 34rem;
+}
+
+.rs__cover {
+  width: min(17rem, 62vw);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 30px 60px -22px rgba(0, 0, 0, 0.85);
+}
+
+.rs__title {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.rs__subtitle { margin: -0.5rem 0 0; }
+
+.rs__subtitle p {
+  margin: 0;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.rs__subtitle a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.rs__subtitle a:hover,
+.rs__subtitle a:focus-visible { text-decoration-color: #fff; }
+
+/* ---------------------------------------------------------------- panel -- */
+
+.rs__panel {
+  position: relative;
+  z-index: 1;
+  background: var(--rs-panel);
+  color: var(--rs-panel-ink);
+  border-radius: 22px 22px 0 0;
+  margin-top: -22px;
+  box-shadow: 0 -16px 40px -24px rgba(0, 0, 0, 0.7);
+}
+
+.rs__panel-inner {
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 2.5rem);
+  width: 100%;
+  max-width: 34rem;
+  margin-inline: auto;
+  padding: clamp(1.75rem, 5vw, 2.5rem) clamp(1.25rem, 5vw, 2rem) clamp(3rem, 8vw, 4rem);
+}
+
+.rs__group-title {
+  margin: 0 0 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rs-panel-muted);
+}
+
+/* -------------------------------------------------------------- players -- */
+
+.rs__media {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  background: rgba(20, 22, 26, 0.06);
+}
+
+.embed--video iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+.embed--audio iframe { height: 352px; }
+
+/* ---------------------------------------------------------- service rows -- */
+
+.rs__links {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rs__links a {
+  display: grid;
+  grid-template-columns: 4.25rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.4rem 0.9rem 0.4rem 0.4rem;
+  border-radius: var(--rs-radius);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.svc__tile {
+  display: grid;
+  place-items: center;
+  height: 2.9rem;
+  padding: 0 0.6rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(16, 18, 22, 0.14);
+  transition: box-shadow 0.18s ease;
+}
+
+.svc__tile .svc-glyph {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--brand-on-light);
+}
+
+.svc__label {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.2;
+}
+
+.svc__kicker {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--rs-panel-muted);
+}
+
+.svc__name {
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.svc__go {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: var(--rs-panel-muted);
+  transition: fill 0.18s ease, transform 0.18s ease;
+}
+
+@media (hover: hover) {
+  .rs__links a:hover {
+    background: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px -14px rgba(16, 18, 22, 0.75);
+  }
+
+  .rs__links a:hover .svc__tile {
+    box-shadow: 0 0 0 1.5px color-mix(in srgb, var(--brand-on-light) 45%, transparent);
+  }
+
+  .rs__links a:hover .svc__go {
+    fill: var(--rs-panel-ink);
+    transform: translate(1px, -1px);
+  }
+}
+
+.rs__links a:active { transform: translateY(0); }
+
+/* -------------------------------------------------------------- credits -- */
+
+.rs__credits {
+  padding-top: clamp(1rem, 3vw, 1.5rem);
+  border-top: 1px solid var(--rs-panel-line);
+}
+
+.rs__credits p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--rs-panel-muted);
+}
+
+/* --------------------------------------------------------------- focus --- */
+
+a:focus-visible {
+  outline: 2px solid var(--accent-on-dark, #fff);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.rs__panel a:focus-visible { outline-color: var(--rs-panel-ink); }
+
+/* ============================ tablet ====================================== */
+
+@media (min-width: 768px) {
+  .rs__panel-inner { max-width: 44rem; }
+
+  .rs__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+}
+
+/* ============================ desktop ===================================== */
+
+@media (min-width: 1024px) {
+  .rs {
+    grid-template-columns: minmax(0, 1fr) clamp(23rem, 34vw, 32rem);
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .rs__stage {
+    min-height: 0;
+    overflow-y: auto;
+    padding-block: 3rem;
+  }
+
+  .rs__panel {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin-top: 0;
+    border-radius: 0;
+    box-shadow: -1px 0 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .rs__panel-inner {
+    max-width: 30rem;
+    padding: 3rem 2rem 4rem;
+  }
+
+  .rs__links { grid-template-columns: minmax(0, 1fr); }
+
+  .rs__cover { width: min(21rem, 26vw); }
+}
+
+@media (min-width: 1440px) {
+  .rs__cover { width: 23rem; }
+  .rs__title { font-size: 3.75rem; }
+}
+
+/* --------------------------------------------------------- preferences --- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .rs { display: block; height: auto; overflow: visible; }
+  .rs__stage::before,
+  .rs__stage::after { display: none; }
+  .rs__stage { color: #000; }
+  .rs__media { display: none; }
+}

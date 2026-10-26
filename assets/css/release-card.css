@@ -1,0 +1,370 @@
+/* ==========================================================================
+   Design 2 — "Showcase Card"            layout: release_card
+   Inspired by the bfan.link / Believe smart link.
+
+   Structure
+     .rc          fixed, blurred artwork backdrop
+     .rc__shell   centred content column
+     .rc__hero    artwork + title + subtitle
+     .rc__card    bright sheet holding players, service rows and credits
+
+   Breakpoints
+     < 768px    one narrow column, card spans the full width
+     768–1199   wider column, service rows in two columns
+     >= 1200px  roomier column, larger artwork
+   ========================================================================== */
+
+:root {
+  --rc-card: #ffffff;
+  --rc-card-ink: #16181d;
+  --rc-card-muted: #717784;
+  --rc-card-line: rgba(22, 24, 29, 0.1);
+  --rc-hero-ink: #ffffff;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body.rc-body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  background: #15171c;
+  color: var(--rc-hero-ink);
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; }
+
+/* ------------------------------------------------------------- backdrop -- */
+
+/* A 48px-wide WebP of the artwork, scaled up and blurred: a soft, cheap
+   wash of the record's own colours. */
+.rc::before {
+  content: "";
+  position: fixed;
+  inset: -12%;
+  z-index: -2;
+  background-image: var(--canvas);
+  background-size: cover;
+  background-position: center;
+  filter: blur(55px) saturate(1.35);
+  transform: scale(1.12);
+}
+
+/* Dominant-colour wash. Also carries the whole background on releases that
+   set `hideBackgroundImage`, where --canvas resolves to `none`. */
+.rc::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(75% 55% at 50% -5%, color-mix(in srgb, var(--art-4) 55%, transparent), transparent 70%),
+    radial-gradient(65% 45% at 10% 95%, color-mix(in srgb, var(--art-5) 45%, transparent), transparent 70%),
+    linear-gradient(180deg,
+      rgba(10, 12, 16, calc(0.2 + 0.5 * var(--scrim, 0.35))) 0%,
+      rgba(10, 12, 16, calc(0.38 + 0.45 * var(--scrim, 0.35))) 55%,
+      rgba(10, 12, 16, calc(0.5 + 0.42 * var(--scrim, 0.35))) 100%);
+}
+
+/* ---------------------------------------------------------------- shell -- */
+
+.rc__shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+  width: min(100%, 30rem);
+  margin-inline: auto;
+  padding-inline: clamp(0.75rem, 4vw, 1.5rem);
+}
+
+/* Keep the sheet anchored to the bottom of the viewport on short releases. */
+.rc__card { flex: 1 1 auto; }
+
+/* ----------------------------------------------------------------- hero -- */
+
+.rc__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  padding: clamp(2rem, 8vw, 3.5rem) 0 clamp(1.5rem, 5vw, 2.5rem);
+  text-align: center;
+}
+
+.rc__cover-wrap { margin-bottom: clamp(1.25rem, 4vw, 1.75rem); }
+
+.rc__cover {
+  display: block;
+  width: min(16rem, 62vw);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 26px 50px -18px rgba(0, 0, 0, 0.8);
+  -webkit-box-reflect: below 0.35rem linear-gradient(transparent 74%, rgba(255, 255, 255, 0.12));
+}
+
+.rc__title {
+  margin: 0;
+  font-size: clamp(1.6rem, 6.5vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  text-wrap: balance;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
+}
+
+.rc__subtitle p {
+  margin: 0;
+  font-size: clamp(0.95rem, 3.4vw, 1.05rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.rc__subtitle a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+  text-underline-offset: 0.18em;
+}
+
+.rc__subtitle a:hover,
+.rc__subtitle a:focus-visible { text-decoration-color: #fff; }
+
+/* ----------------------------------------------------------------- card -- */
+
+.rc__card {
+  position: relative;
+  background: var(--rc-card);
+  color: var(--rc-card-ink);
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -10px 40px -18px rgba(0, 0, 0, 0.65);
+}
+
+/* The slightly tilted sheet peeking out behind the card, like the reference
+   layout. */
+.rc__card::before {
+  content: "";
+  position: absolute;
+  inset: -0.7rem 0.7rem auto;
+  height: 2rem;
+  background: var(--rc-card);
+  border-radius: 14px 14px 0 0;
+  transform: rotate(-0.7deg);
+  transform-origin: 50% 100%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.rc__card-inner {
+  position: relative;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2rem);
+  padding: clamp(1.5rem, 5vw, 2rem) clamp(1.1rem, 4.5vw, 1.75rem) clamp(2.5rem, 8vw, 3.5rem);
+}
+
+.rc__group-title {
+  margin: 0 0 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-card-muted);
+}
+
+/* -------------------------------------------------------------- players -- */
+
+.rc__media {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  background: rgba(22, 24, 29, 0.06);
+}
+
+.embed--video iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+.embed--audio iframe { height: 352px; }
+
+/* ---------------------------------------------------------- service rows -- */
+
+.rc__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+}
+
+.rc__links li + li { border-top: 1px solid var(--rc-card-line); }
+
+.rc__links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.7rem 0.25rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.svc__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+}
+
+.svc__glyph-wrap {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--brand-on-light);
+}
+
+.svc__name {
+  font-size: clamp(0.95rem, 3.2vw, 1.05rem);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.svc__cta {
+  flex: 0 0 auto;
+  min-width: 4.5rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--rc-card-line);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--rc-card-ink);
+  background: #fff;
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease;
+}
+
+@media (hover: hover) {
+  .rc__links a:hover .svc__cta {
+    background: var(--brand-on-light);
+    border-color: var(--brand-on-light);
+    color: #fff;
+  }
+
+  /* Tidal's mark is black on light surfaces; keep its label readable. */
+  .svc--tidal a:hover .svc__cta { color: #fff; }
+}
+
+.rc__links a:active .svc__cta { transform: translateY(1px); }
+
+/* -------------------------------------------------------------- credits -- */
+
+.rc__credits {
+  padding-top: clamp(0.75rem, 3vw, 1.25rem);
+  border-top: 1px solid var(--rc-card-line);
+}
+
+.rc__credits p {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--rc-card-muted);
+}
+
+/* --------------------------------------------------------------- focus --- */
+
+a:focus-visible {
+  outline: 2px solid var(--accent-on-dark, #fff);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.rc__card a:focus-visible { outline-color: var(--rc-card-ink); }
+
+/* ============================ tablet ====================================== */
+
+@media (min-width: 768px) {
+  .rc__shell { width: min(100%, 42rem); }
+
+  .rc__cover { width: 17.5rem; }
+
+  .rc__title { font-size: 2.5rem; }
+
+  .rc__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.5rem;
+  }
+
+  /* With two columns the first row of each column must keep its top rule
+     off, and every following row needs one. */
+  .rc__links li + li { border-top: 1px solid var(--rc-card-line); }
+  .rc__links li:nth-child(2) { border-top: 0; }
+
+  .rc__media {
+    max-width: 30rem;
+    margin-inline: auto;
+  }
+
+  .rc__card { border-radius: 22px 22px 0 0; }
+}
+
+/* ============================ desktop ===================================== */
+
+@media (min-width: 1200px) {
+  .rc__shell { width: min(100%, 48rem); }
+
+  .rc__cover { width: 20rem; }
+
+  .rc__title { font-size: 2.9rem; }
+
+  .rc__card-inner { padding-inline: 2.5rem; }
+
+  .rc__links a { padding-block: 0.8rem; }
+}
+
+/* --------------------------------------------------------- preferences --- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .rc::before,
+  .rc::after { display: none; }
+  body.rc-body { background: #fff; color: #000; }
+  .rc__title,
+  .rc__subtitle p { color: #000; text-shadow: none; }
+  .rc__cover { -webkit-box-reflect: none; }
+  .rc__media { display: none; }
+}

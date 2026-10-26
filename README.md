@@ -40,6 +40,80 @@ openssl dgst -sha256 -binary assets/js/jquery.min.js | openssl base64 -A
 
 Meta tags: <https://stackoverflow.com/questions/19778620/provide-an-image-for-whatsapp-link-sharing#43154489>
 
+## Release page designs
+
+A release page (`content/releases/*.md`) picks its design through the `layout` key in the
+front matter. Three designs live in [`layouts/_default/`](layouts/_default); they all show
+the same title, content, credits, YouTube and Spotify embeds and the exact same set of
+service links, and they are all responsive from phone to desktop.
+
+| `layout:`        | Design                | Inspired by                                                      |
+| ---------------- | --------------------- | ---------------------------------------------------------------- |
+| `release`        | Classic (default)     | the existing reelbeetz.ch release page, rebuilt                   |
+| `release_split`  | Split Stage           | <https://music.imusician.pro/a/LlETmnp1>                          |
+| `release_card`   | Showcase Card         | <https://bfan.link/creme-brulee-1>                                |
+
+Switching a release is a one-line change:
+
+```yaml
+---
+title: "Crème Brûlée"
+layout: release_split   # was: release
+---
+```
+
+Hugo resolves `<layout>-baseof.html` per layout, so each design owns a base template plus a
+body template. Note that a layout name must not contain a hyphen — Hugo splits on it and
+then fails to find the matching base template, which is why the names use underscores.
+
+### Structure
+
+Markup is shared through partials in [`layouts/_partials/release/`](layouts/_partials/release),
+so a design is essentially just a stylesheet:
+
+- `services.html` — single source of truth for every outbound link, returned as data
+  (`key`, `icon`, `name`, `url`, `group`). Add a platform here and all three designs pick it up.
+- `icon.html` — the brand glyphs, taken verbatim from the original markup
+- `embeds.html` — YouTube and Spotify players
+- `palette.html` — artwork variants plus the colour custom properties below
+- `luminance.html` — relative luminance of a hex colour
+- `head.html`, `analytics.html`, `linklist.html`
+
+The stylesheets are in [`assets/css/`](assets/css) and are bundled, minified and
+fingerprinted with Hugo Pipes (`resources.Concat | minify | fingerprint`);
+`release-brands.css` with the brand colours is shared by all three.
+
+### Colours and background
+
+`palette.html` extracts the artwork's dominant colours with Hugo's `.Colors` and exposes
+everything as custom properties on `<html>`:
+
+| Property                              | Meaning                                                        |
+| ------------------------------------- | -------------------------------------------------------------- |
+| `--accent`                            | the release's `color` front matter value                        |
+| `--accent-on-dark` / `--accent-on-light` | the same colour, swapped for a readable one where it would not be |
+| `--art-1` … `--art-5`                 | dominant artwork colours, most dominant first                   |
+| `--scrim`                             | overall artwork brightness, drives how dark the background scrim is |
+| `--canvas`                            | `url()` of a 48px WebP of the artwork, scaled up as the blurred background |
+
+Releases that set `hideBackgroundImage: true` get `--canvas: none` and are painted from the
+`--art-*` palette alone.
+
+### What was fixed in the classic design
+
+- added the missing `<meta charset>` and `<meta name="viewport">`; without the viewport tag
+  mobile browsers laid the page out at ~980px and zoomed out, so the media queries never
+  behaved as intended
+- the document scrolls normally again — `#main` was `position:absolute; top:0; bottom:0`,
+  which clipped the page to the viewport height
+- the YouTube iframe keeps its 16:9 ratio instead of collapsing to a hardcoded 315px
+- the blurred artwork is visible on phones too (`#bg img` was `display:none` below 992px)
+- releases whose accent is near-black (`#000000`, `#111111`) no longer render black text on
+  a black background
+- removed the Bootstrap 4.4.1 CDN (end of life, ~160 KB for one three-column grid) in favour
+  of a small CSS grid, and the duplicated `mobileonly` link list
+- the 3000px artwork is served resized as WebP via `srcset` instead of at full size
+
 ## CI
 
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs on every push to `master` and on

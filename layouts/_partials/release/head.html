@@ -1,0 +1,32 @@
+{{- /*
+  release/head.html — document head shared by every release design.
+  Context: a map with
+    page     the release page
+    palette  the result of release/palette.html
+    css      the stylesheet resource to link
+*/ -}}
+{{- $p := .page -}}
+{{- $pal := .palette -}}
+{{- $css := .css -}}
+{{- $subtitle := $p.Content | plainify | chomp -}}
+{{- $desc := printf "%s – %s, listen on Spotify, Apple Music, YouTube and more. %s" $p.Title $subtitle ($p.Params.credits | default "") | chomp -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ $p.Title }} – {{ $subtitle }}</title>
+<meta name="description" content="{{ $desc }}">
+<meta name="theme-color" content="{{ $pal.accent }}">
+<meta property="og:title" content="{{ $p.Title }} – {{ $subtitle }}">
+<meta property="og:url" content="{{ $p.Permalink }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:image" content="{{ printf "/thumbs%s" $pal.art | absURL }}">
+<meta property="og:type" content="music:{{ $p.Params.release }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@reelbeetz">
+<meta name="twitter:creator" content="@reelbeetz">
+<link rel="canonical" href="{{ $p.Permalink }}">
+<link rel="shortcut icon" href="{{ $p.Site.Params.favicon }}">
+<link rel="apple-touch-icon" href="{{ $pal.art }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap">
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">

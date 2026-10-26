@@ -1,0 +1,43 @@
+/* ==========================================================================
+   release-brands.css
+   Brand accents shared by every release design.
+
+   Each service row carries `svc svc--<key>`; the CSS below only exposes two
+   custom properties so each design can decide how to use them:
+
+     --brand           tuned for dark surfaces
+     --brand-on-light  tuned for white / light surfaces
+
+   The values are the ones from the original layout, lightened or darkened
+   only where the original was unreadable on the surface it sits on
+   (Pandora #005483 on black, Tidal #ffffff on white, …).
+   ========================================================================== */
+
+.svc {
+  --brand: currentColor;
+  --brand-on-light: currentColor;
+}
+
+.svc--spotify         { --brand: #1ed760; --brand-on-light: #1aa34a; }
+.svc--apple           { --brand: #fb5bc5; --brand-on-light: #d9307f; }
+.svc--youtube         { --brand: #ff3b30; --brand-on-light: #e52117; }
+.svc--vimeo           { --brand: #1ab7ea; --brand-on-light: #1188b2; }
+.svc--soundcloud      { --brand: #ff5c33; --brand-on-light: #e03000; }
+.svc--deezer          { --brand: #feaa2d; --brand-on-light: #b36f00; }
+.svc--pandora         { --brand: #5aa7e0; --brand-on-light: #005483; }
+.svc--bandcamp        { --brand: #6fa8b8; --brand-on-light: #336b7a; }
+.svc--amazon          { --brand: #ff9900; --brand-on-light: #b36b00; }
+.svc--tidal           { --brand: #ffffff; --brand-on-light: #000000; }
+.svc--napster         { --brand: #4f93e0; --brand-on-light: #1a5aa0; }
+.svc--mx3             { --brand: #e05a54; --brand-on-light: #a52721; }
+.svc--googleplaymusic { --brand: #f97a4a; --brand-on-light: #cc3f0c; }
+.svc--googleplaystore { --brand: #35d6f0; --brand-on-light: #00829a; }
+
+/* Glyphs are inline SVG and inherit their container's colour unless a design
+   overrides `fill`. */
+.svc-glyph {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
