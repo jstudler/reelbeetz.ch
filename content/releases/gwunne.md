@@ -13,7 +13,7 @@ spotify: "https://open.spotify.com/album/6WBSDXCPuSkvcxTaE0RgFg?si=vZ41Z2pdRGyDG
 deezer: "https://www.deezer.com/track/960120712"
 pandora: "https://pandora.app.link/?$desktop_url=https%3A%2F%2Fwww.pandora.com%2FTR%3A31704676&$ios_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Ftrack%3Ftoken%3DTR%3A31704676&$android_deeplink_path=pandorav4%3A%2F%2Fbackstage%2Ftrack%3Ftoken%3DTR%3A31704676"
 tidal: "https://listen.tidal.com/track/141376026"
-napster: "https://napster.com/track/tra.474929097"
+#napster: "https://napster.com/track/tra.474929097" # dead 2026-10-26: Napster deep links are gone
 mx3audio: https://mx3.ch/t/1wVL
 #mx3video: "https://mx3.ch/t/1wcY"
 youtubeid: "v8GipfWsAeE"
@@ -24,7 +24,7 @@ apple: "https://music.apple.com/ch/album/gwunne-single/1513196555?l=en"
 amazonmusic: "https://music.amazon.com/albums/B088KRGK28?trackAsin=B088KT7Z4S&do=play"
 amazondownload: "https://amazon.com/dp/B088KT7Z4S?tag=songlink0d-20"
 #googleplaymusic: "https://play.google.com/music/m/Trnjoxasrsvrwlbs2juxbl2li2i?signup_if_needed=1"
-googleplaystore: "https://play.google.com/store/music/album/REEL_BEETZ_Gwunne?id=Bgs3bkwglikgt77czdybtyq3zzy"
+#googleplaystore: "https://play.google.com/store/music/album/REEL_BEETZ_Gwunne?id=Bgs3bkwglikgt77czdybtyq3zzy" # dead 2026-10-26: Google Play Music shut down in 2020
 ---
 
-by [Weibello](https://www.weibello.ch/) & [REEL BEETZ](https://reelbeetz.ch)
+by [Weibello](https://mx3.ch/weibello) & [REEL BEETZ](https://reelbeetz.ch)

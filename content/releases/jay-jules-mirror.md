@@ -17,7 +17,7 @@ color: "#aaa"
 spotify: "https://open.spotify.com/album/2IvhX6bDUBSA8nuFZ8LX6N?si=6mVyd5MRSPeVed7XRv9umw"
 youtubeid: "C566PcMG27E"
 pandora: "https://www.pandora.com/artist/jay-jules-lilian-salathe-and-reel-beetz/mirror-single-explicit/mirror/TRX9fchczcKJjlg"
-napster: "http://napster.com/artist/art.331194689/album/alb.442393160/track/tra.442393162"
+#napster: "http://napster.com/artist/art.331194689/album/alb.442393160/track/tra.442393162" # dead 2026-10-26: Napster deep links are gone
 deezer: "https://www.deezer.com/track/870895892"
 apple: "https://music.apple.com/ch/artist/jay-jules/1438125453"
 amazonmusic: "https://music.amazon.com/albums/B084JN685M?trackAsin=B084JQYYG7&do=play"

@@ -22,8 +22,8 @@ soundcloud: "https://soundcloud.com/reelbeetz/the-talk"
 apple: "https://music.apple.com/ch/album/talk-feat-miss-c-line-jay-jules-don-pewe-nisl-mc-juli/1505288824?l=en"
 amazonmusic: "https://music.amazon.com/albums/B086H43T71?trackAsin=B086H4Q75Q&do=play"
 amazondownload: "https://amazon.com/dp/B086H4Q75Q"
-googleplaymusic: "https://play.google.com/music/m/Trnjoxasrsvrwlbs2juxbl2li2i?signup_if_needed=1"
-googleplaystore: "https://play.google.com/store/music/album?id=Bbjeb2sfxomotfymc56xvvlcazu&tid=song-Trnjoxasrsvrwlbs2juxbl2li2i"
+#googleplaymusic: "https://play.google.com/music/m/Trnjoxasrsvrwlbs2juxbl2li2i?signup_if_needed=1" # dead 2026-10-26: Google Play Music shut down in 2020
+#googleplaystore: "https://play.google.com/store/music/album?id=Bbjeb2sfxomotfymc56xvvlcazu&tid=song-Trnjoxasrsvrwlbs2juxbl2li2i" # dead 2026-10-26: Google Play Music shut down in 2020
 ---
 
-by [The Talk!](https://thetalk.ch), [MC Juli](https://www.mcjuli.net), [nisl](http://nisl.ch), [Miss C-Line](https://www.instagram.com/or.v.c), [Jay Jules](https://www.instagram.com/jayjulesnet), [PeWe & Don](https://www.instagram.com/pewe8don/)
+by [The Talk!](https://thetalk.ch), [MC Juli](https://mx3.ch/mcjuli), [nisl](http://nisl.ch), [Miss C-Line](https://www.instagram.com/or.v.c), [Jay Jules](https://www.instagram.com/jayjulesnet), [PeWe & Don](https://www.instagram.com/pewe8don/)

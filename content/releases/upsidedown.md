@@ -24,17 +24,17 @@ soundcloud: "https://soundcloud.com/reelbeetz/sets/upside-down"
 deezer: "https://www.deezer.com/album/15050653"
 pandora: "https://www.pandora.com/artist/reel-beetz/upside-down-single/ALcrdwl23Jqn9qV"
 tidal: "https://song.link/upsidedown"
-napster: "http://napster.com/artist/art.231697862/album/alb.249267078"
+#napster: "http://napster.com/artist/art.231697862/album/alb.249267078" # dead 2026-10-26: Napster deep links are gone
 mx3video: "https://mx3.ch/reelbeetz"
 youtubeid: "VtNMD4lCrew"
 vimeo: "https://vimeo.com/reelbeetz"
 bandcamp: "https://reelbeetz.bandcamp.com/album/upside-down-ep"
-apple: "https://music.apple.com/ch/album/upside-down-ep/1194967340"
+apple: "https://music.apple.com/ch/album/upside-down-ep/1560181721"
 amazonmusic: "https://music.amazon.com/albums/B01MZ99EOH?do=play"
 amazondownload: "https://amazon.com/dp/B01MZ99EOH?tag=songlink0d-20"
-googleplaymusic: "https://play.google.com/music/m/Beadqkndoh6jmlqf53jdcw2gz2a?signup_if_needed=1"
-googleplaystore: "https://play.google.com/store/music/album?id=Beadqkndoh6jmlqf53jdcw2gz2a"
+#googleplaymusic: "https://play.google.com/music/m/Beadqkndoh6jmlqf53jdcw2gz2a?signup_if_needed=1" # dead 2026-10-26: Google Play Music shut down in 2020
+#googleplaystore: "https://play.google.com/store/music/album?id=Beadqkndoh6jmlqf53jdcw2gz2a" # dead 2026-10-26: Google Play Music shut down in 2020
 ---
 
-by [REEL BEETZ](https://reelbeetz.ch) featuring [Sa Mood](http://www.samood.ch) & Possibility
+by [REEL BEETZ](https://reelbeetz.ch) featuring [Sa Mood](https://mx3.ch/samood) & Possibility
 

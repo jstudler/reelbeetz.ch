@@ -22,7 +22,7 @@ deezer: "https://www.deezer.com/en/track/2077945927"
 apple: "https://music.apple.com/es/album/today-is-ok-earth-mix/1660921359?i=1660921361"
 amazonmusic: "https://www.amazon.com/dp/B0BQN9K9KS"
 amazondownload: "https://www.amazon.com/dp/B0BQN9K9KS"
-mx3audio: "https://mx3.ch/t/1JqQ"
+mx3audio: "https://mx3.ch/t/1KpC"
 bandcamp: "https://jayjules.bandcamp.com/track/today-is-ok-earth-mix"
 ---
 

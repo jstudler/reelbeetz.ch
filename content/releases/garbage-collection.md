@@ -12,7 +12,7 @@ spotify: "https://open.spotify.com/album/7mDQUSN4kIMjE1cCNG8tLq"
 deezer: "https://www.deezer.com/album/287561572"
 pandora: "https://www.pandora.com/AL:12188785"
 tidal: "https://listen.tidal.com/album/212391408"
-napster: "https://napster.com/album/alb.638902213"
+#napster: "https://napster.com/album/alb.638902213" # dead 2026-10-26: Napster deep links are gone
 #mx3audio: https://mx3.ch/t/1wVL
 #mx3video: "https://mx3.ch/t/1wcY"
 youtubeid: "XrQqJy68yY0"

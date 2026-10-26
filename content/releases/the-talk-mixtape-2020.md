@@ -22,8 +22,8 @@ bandcamp: "https://reelbeetz.bandcamp.com/album/the-talk-mixtape-2020"
 #apple: "https://music.apple.com/ch/album/talk-feat-miss-c-line-jay-jules-don-pewe-nisl-mc-juli/1505288824?l=en"
 amazonmusic: "https://music.amazon.com/albums/B087V1F1XK?do=play"
 amazondownload: "https://amazon.com/dp/B087V1F1XK?tag=songlink0d-20"
-googleplaymusic: "https://play.google.com/music/m/Trnjoxasrsvrwlbs2juxbl2li2i?signup_if_needed=1"
-googleplaystore: "https://play.google.com/store/music/album/REEL_BEETZ_The_Talk_Mixtape_2020_Live?id=Bgjn2nleplr3v266rcudae3zxuq"
+#googleplaymusic: "https://play.google.com/music/m/Trnjoxasrsvrwlbs2juxbl2li2i?signup_if_needed=1" # dead 2026-10-26: Google Play Music shut down in 2020
+#googleplaystore: "https://play.google.com/store/music/album/REEL_BEETZ_The_Talk_Mixtape_2020_Live?id=Bgjn2nleplr3v266rcudae3zxuq" # dead 2026-10-26: Google Play Music shut down in 2020
 ---
 
 by [The Talk!](https://thetalk.ch)
