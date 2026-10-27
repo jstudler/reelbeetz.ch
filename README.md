@@ -150,6 +150,20 @@ Goldmark drops raw HTML otherwise.
 Releases that still use the older single-quoted form keep working — they just render as
 one flowing paragraph, exactly as before.
 
+### Artwork tilt
+
+On desktop the artwork leans in 3D as the pointer moves, so it reads as a physical sleeve
+rather than a flat image. [`assets/js/release-tilt.js`](assets/js/release-tilt.js) is
+~130 lines of dependency-free JS that only writes two custom properties, `--tilt-x` and
+`--tilt-y`, normalised to `-1..1`;
+[`assets/css/release-tilt.css`](assets/css/release-tilt.css) decides what that means —
+currently a 7° rotation, a 14px lift and a shadow that swings against the tilt.
+
+Opt an element in with `data-release-tilt`. The effect requires
+`(min-width: 1024px) and (hover: hover) and (pointer: fine)`, so phones and tablets never
+run it, and it is disabled under `prefers-reduced-motion`. The script stops its animation
+frame loop as soon as the value settles, so an idle page costs nothing.
+
 ### What was fixed in the classic design
 
 Kept as `release_classic`, this is the earlier release page repaired rather than replaced.
@@ -203,4 +217,13 @@ hugo --gc --minify 2>&1 | tee /tmp/hugo.log
 
 Thumbs (e.g. for WhatsApp) must be below 300KB: https://stackoverflow.com/questions/19778620/provide-an-image-for-whatsapp-link-sharing
 
-Using generate-thumbs.sh and a git hook to create thumbs before committing.
+Using [`generate-thumbs.sh`](generate-thumbs.sh) and a git hook to create thumbs
+before committing. It resizes `static/artwork/*.jpg` to 400 px wide into
+`static/thumbs/artwork` and stages the result.
+
+The script is incremental: a thumb is only re-encoded when it is missing, when
+its pixel dimensions do not match the `-resize 400` output for its original, or
+when it is above the 300 KiB limit. Everything else keeps its bytes and stays
+out of the diff. Thumbs whose original is gone are deleted. If a thumb is still
+too large after the resize, the script re-encodes it from the original at
+quality 85, 75 and 65, and exits non-zero if even that is not enough.

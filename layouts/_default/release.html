@@ -19,7 +19,7 @@
   <section class="rs__stage">
     <div class="rs__stage-inner">
       {{ with $pal.cover }}
-      <img class="rs__cover"
+      <img class="rs__cover" data-release-tilt
            src="{{ . }}"{{ with $pal.srcset }} srcset="{{ . }}" sizes="(min-width: 1024px) 340px, 60vw"{{ end }}
            width="640" height="640"
            alt="{{ $.Title }} – artwork" decoding="async" fetchpriority="high">

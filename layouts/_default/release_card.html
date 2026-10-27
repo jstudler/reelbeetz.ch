@@ -19,7 +19,7 @@
     <header class="rc__hero">
       {{ with $pal.cover }}
       <div class="rc__cover-wrap">
-        <img class="rc__cover"
+        <img class="rc__cover" data-release-tilt
              src="{{ . }}"{{ with $pal.srcset }} srcset="{{ . }}" sizes="(min-width: 1200px) 320px, (min-width: 768px) 280px, 62vw"{{ end }}
              width="640" height="640"
              alt="{{ $.Title }} – artwork" decoding="async" fetchpriority="high">

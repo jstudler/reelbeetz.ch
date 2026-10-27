@@ -2,6 +2,7 @@
 {{- $css := slice
       (resources.Get "css/release-brands.css")
       (resources.Get "css/release-split.css")
+      (resources.Get "css/release-tilt.css")
     | resources.Concat "css/release-split.bundle.css" | minify | fingerprint -}}
 <!DOCTYPE html>
 <html lang="{{ site.Language.Lang | default "en" }}" style="{{ $pal.style | safeCSS }}">
@@ -10,6 +11,7 @@
 </head>
 <body class="rs-body">
 {{ block "main" . }}{{ end }}
+{{ partial "release/tilt.html" . }}
 {{ partial "release/analytics.html" . }}
 </body>
 </html>

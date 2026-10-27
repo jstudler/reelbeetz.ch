@@ -16,6 +16,7 @@
 {{- $css := slice
       (resources.Get "css/release-brands.css")
       (resources.Get "css/release-classic.css")
+      (resources.Get "css/release-tilt.css")
     | resources.Concat "css/release-classic.bundle.css" | minify | fingerprint -}}
 <!DOCTYPE html>
 <html lang="{{ site.Language.Lang | default "en" }}" style="{{ $pal.style | safeCSS }}">
@@ -25,6 +26,7 @@
 <body class="rl-body">
 <div class="rl-bg" aria-hidden="true"></div>
 {{ block "main" . }}{{ end }}
+{{ partial "release/tilt.html" . }}
 {{ partial "release/analytics.html" . }}
 </body>
 </html>

@@ -35,7 +35,7 @@
 
     <section class="rl__col rl__col--cover" id="cover">
       {{ with $pal.cover }}
-      <img class="rl__cover"
+      <img class="rl__cover" data-release-tilt
            src="{{ . }}"{{ with $pal.srcset }} srcset="{{ . }}" sizes="(min-width: 992px) 360px, (min-width: 640px) 45vw, 100vw"{{ end }}
            width="640" height="640"
            alt="{{ $.Title }} – artwork" decoding="async" fetchpriority="high">

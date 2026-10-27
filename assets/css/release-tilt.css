@@ -1,0 +1,55 @@
+/* ==========================================================================
+   release-tilt.css
+   The 3D tilt the artwork follows the pointer with, shared by all designs.
+
+   release-tilt.js only writes --tilt-x and --tilt-y, normalised to -1..1.
+   Everything else is decided here, which keeps the effect off entirely
+   wherever the media queries below do not apply — the properties default to
+   0, so the artwork simply sits flat.
+
+   Desktop only, and off under prefers-reduced-motion.
+   ========================================================================== */
+
+[data-release-tilt] {
+  --tilt-x: 0;
+  --tilt-y: 0;
+  --tilt-max: 0deg;
+  --tilt-lift: 0px;
+  transform:
+    perspective(1100px)
+    rotateX(calc(var(--tilt-x) * var(--tilt-max)))
+    rotateY(calc(var(--tilt-y) * var(--tilt-max)))
+    translateZ(var(--tilt-lift));
+  transform-style: preserve-3d;
+}
+
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  [data-release-tilt] {
+    --tilt-max: 7deg;
+    --tilt-lift: 14px;
+    will-change: transform;
+    /* The artwork leans far enough for a corner to lift past its own box, so
+       nothing may clip it. */
+    backface-visibility: hidden;
+  }
+
+  /* The shadow swings against the tilt, which is what sells the near corner
+     lifting off the page rather than the whole image just rotating. */
+  [data-release-tilt].rs__cover,
+  [data-release-tilt].rl__cover,
+  [data-release-tilt].rc__cover {
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.32),
+      calc(var(--tilt-y) * -26px)
+      calc(var(--tilt-x) * 26px + 34px)
+      64px -24px rgba(0, 0, 0, 0.85);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-release-tilt] {
+    --tilt-max: 0deg;
+    --tilt-lift: 0px;
+    will-change: auto;
+  }
+}
