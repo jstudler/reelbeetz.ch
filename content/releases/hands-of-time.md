@@ -6,17 +6,18 @@ draft: false
 release: album
 url: "/hands-of-time"
 image: "/artwork/hands-of-time.jpg"
-credits: "released February 24th, 2023;
-Vocals «Monster»: Syanine;
-Vocals «Hands of Time»: Mabreezee;
-Vocals «Lost & Found»: Phase One;
-Vocals «2twenty2»: Burni Aman & MISS C-LINE;
-Vocals «Say Why»: TwizzMatic;
-Keys, Bass, Mix assistance: James Iwa;
-Drums, Mix: REEL BEETZ;
-Mastering: Dope Mixes;
-Artwork: Lilian Salathé;
-Kindly supported by Burgergemeinde Bern & Swisslos Kultur Kanton Bern"
+credits: |
+  released February 24th, 2023
+  Vocals «Monster»: Syanine
+  Vocals «Hands of Time»: Mabreezee
+  Vocals «Lost & Found»: Phase One
+  Vocals «2twenty2»: Burni Aman & MISS C-LINE
+  Vocals «Say Why»: TwizzMatic
+  Keys, Bass, Mix assistance: James Iwa
+  Drums, Mix: REEL BEETZ
+  Mastering: Dope Mixes
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
+  Kindly supported by Burgergemeinde Bern & Swisslos Kultur Kanton Bern
 color: "#f7a6a5"
 spotify: "https://open.spotify.com/album/7BsXO1QOhE1jNq5LC6DK0v"
 youtubeid: "nwBTofc5av4"

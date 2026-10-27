@@ -6,12 +6,13 @@ draft: false
 release: song
 url: "/dm"
 image: "/artwork/so-close-dm-feat-saimon-disko.jpg"
-credits: "released October 25th, 2024;
-Vocals: Saimon Disko;
-Bass: Christian Spahni;
-Production, Drums, Percussion, Piano, Keyboards, Mix: Joel Studler aka REEL BEETZ;
-Mastering: Dope Mixes;
-Artwork: Lilian Salathé"
+credits: |
+  released October 25th, 2024
+  Vocals: Saimon Disko
+  Bass: Christian Spahni
+  Production, Drums, Percussion, Piano, Keyboards, Mix: Joel Studler aka REEL BEETZ
+  Mastering: Dope Mixes
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#ffffff"
 spotify: "https://open.spotify.com/track/105PGYd29vBuUlvDl2y2gO"
 youtubeid: "WpzC_8odRfY"

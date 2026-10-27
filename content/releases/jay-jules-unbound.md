@@ -6,13 +6,14 @@ draft: false
 release: song
 url: "/unbound"
 image: "/artwork/jay-jules-unbound.jpg"
-credits: "released February 10th, 2023,
-Illustration: Sarah Furrer aka «SaFu»;
-Executive Production, Production, Lyrics, Composition, Mix, Drums, Sampling, Bass, Keys, Percussion: REEL BEETZ;
-Executive Production, Production, Lyrics, Composition, Vocals, Sampling, Bass, Keys, Guitars, Percussion: Jay Jules;
-Guitar: David Friedli;
-Bass: James Iwa;
-Mastering: Slade Templeton"
+credits: |
+  released February 10th, 2023
+  Illustration: Sarah Furrer aka «SaFu»
+  Executive Production, Production, Lyrics, Composition, Mix, Drums, Sampling, Bass, Keys, Percussion: REEL BEETZ
+  Executive Production, Production, Lyrics, Composition, Vocals, Sampling, Bass, Keys, Guitars, Percussion: Jay Jules
+  Guitar: David Friedli
+  Bass: James Iwa
+  Mastering: Slade Templeton
 # color: "#7fc1b7"
 color: "#ebd499"
 spotify: "https://open.spotify.com/track/5UBvinYIxIVjWaVnDEbaff"

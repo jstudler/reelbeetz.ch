@@ -6,11 +6,12 @@ draft: false
 release: song
 url: "/home-is"
 image: "/artwork/jay-jules-home-is.jpg"
-credits: "released February 10th, 2023,
-Illustration: Sarah Furrer aka «SaFu»;
-Executive Production, Production, Lyrics, Composition, Mix, Drums, Sampling, Bass, Keys, Percussion: REEL BEETZ;
-Executive Production, Production, Lyrics, Composition, Vocals, Sampling, Bass, Keys, Guitars, Percussion: Jay Jules;
-Mastering: Slade Templeton"
+credits: |
+  released February 10th, 2023
+  Illustration: Sarah Furrer aka «SaFu»
+  Executive Production, Production, Lyrics, Composition, Mix, Drums, Sampling, Bass, Keys, Percussion: REEL BEETZ
+  Executive Production, Production, Lyrics, Composition, Vocals, Sampling, Bass, Keys, Guitars, Percussion: Jay Jules
+  Mastering: Slade Templeton
 # color: "#7fc1b7"
 color: "#ebd499"
 spotify: "https://open.spotify.com/track/7KmkcxgFNcYrwyGDrqeS1D?si=17b5a899b0eb413f"

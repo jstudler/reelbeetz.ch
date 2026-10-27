@@ -1,0 +1,72 @@
+{{- /*
+  Design 2 — "Showcase Card"  (layout: release_card)
+
+  the artwork floats on a blurred version of itself, the title sits underneath it, and everything actionable lives in a bright card that rises from the bottom of the screen.
+*/ -}}
+{{ define "main" }}
+{{- $pal := partialCached "release/palette.html" . .RelPermalink -}}
+{{- $services := partial "release/services.html" . -}}
+{{- $groups := slice
+      (dict "id" "listen"   "title" "Listen"   "cta" "Play")
+      (dict "id" "watch"    "title" "Watch"    "cta" "Watch")
+      (dict "id" "download" "title" "Download" "cta" "Get") -}}
+
+<main class="rc">
+  <div class="rc__shell">
+
+    <header class="rc__hero">
+      {{ with $pal.cover }}
+      <div class="rc__cover-wrap">
+        <img class="rc__cover" data-release-tilt
+             src="{{ . }}"{{ with $pal.srcset }} srcset="{{ . }}" sizes="(min-width: 1200px) 320px, (min-width: 768px) 280px, 62vw"{{ end }}
+             width="640" height="640"
+             alt="{{ $.Title }} – artwork" decoding="async" fetchpriority="high">
+      </div>
+      {{ end }}
+      <h1 class="rc__title">{{ .Title }}</h1>
+      <div class="rc__subtitle">{{ .Content }}</div>
+    </header>
+
+    <section class="rc__card">
+      <div class="rc__card-inner">
+
+        <div class="rc__media" aria-label="Players">
+          {{ partial "release/embeds.html" . }}
+        </div>
+
+        {{ range $groups }}
+        {{- $group := . -}}
+        {{- $items := where $services "group" $group.id -}}
+        {{- with $items }}
+        <section class="rc__group" aria-labelledby="rc-{{ $group.id }}">
+          <h2 class="rc__group-title" id="rc-{{ $group.id }}">{{ $group.title }}</h2>
+          <ul class="rc__links">
+            {{ range . }}
+            <li class="svc svc--{{ .key }}">
+              <a href="{{ .url }}" target="_blank" rel="noopener">
+                <span class="svc__brand">
+                  <span class="svc__glyph-wrap">{{ partial "release/icon.html" .icon }}</span>
+                  <span class="svc__name">{{ .name }}</span>
+                </span>
+                <span class="svc__cta">{{ $group.cta }}</span>
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </section>
+        {{ end }}
+        {{ end }}
+
+        {{ with .Params.credits }}
+        <section class="rc__credits" id="credits" aria-label="Credits">
+          <h2 class="rc__group-title">Credits</h2>
+          <div class="rc__credits-body">{{ . | markdownify }}</div>
+        </section>
+        {{ end }}
+
+      </div>
+    </section>
+
+  </div>
+</main>
+{{ end }}

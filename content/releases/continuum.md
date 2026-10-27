@@ -6,7 +6,10 @@ draft: false
 release: song
 url: "/continuum"
 image: "/artwork/reel-beetz-continuum-feat-burni-aman-jay-jules.jpg"
-credits: "produced by Joel Studler, lyrics by Jay Jules & Burni Aman, released October 7th, 2022"
+credits: |
+  produced by Joel Studler
+  lyrics by Jay Jules & Burni Aman
+  released October 7th, 2022
 color: "#8ebfcd"
 spotify: "https://open.spotify.com/album/2JIfRnrdA1MKUzT1CPoakG"
 #deezer: "https://www.deezer.com/track/1926064607" # dead 2026-10-26: no longer on Deezer

@@ -1,0 +1,7 @@
+{{- /*
+  release/tilt.html — loads the pointer-driven 3D tilt for the artwork.
+  The script is a no-op unless something on the page carries
+  `data-release-tilt`, and it gates itself to desktop pointers.
+*/ -}}
+{{- $js := resources.Get "js/release-tilt.js" | minify | fingerprint -}}
+<script src="{{ $js.RelPermalink }}" defer></script>

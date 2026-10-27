@@ -7,12 +7,13 @@ release: song
 url: "/mirror"
 image: "/artwork/jay-jules-mirror-feat-lilian-salathe-and-reel-beetz.jpg"
 hideBackgroundImage: true # maybe change this to "backgroundColor" and don't show image if set...
-credits: "released February 7, 2020,
-Rap, Lyrics, Video Post Production: Jay Jules,
-Vocals, Spoken, Artwork, Video Camera & Light: Lilian Salathé, 
-Production, Composition, Mix: Joel Studler, 
-Video Post Production: Karin Schmid, 
-Video Concept: Sandra Schmid"
+credits: |
+  released February 7, 2020
+  Rap, Lyrics, Video Post Production: Jay Jules
+  Vocals, Spoken, Artwork, Video Camera & Light: Lilian Salathé
+  Production, Composition, Mix: Joel Studler
+  Video Post Production: Karin Schmid
+  Video Concept: Sandra Schmid
 color: "#aaa"
 spotify: "https://open.spotify.com/album/2IvhX6bDUBSA8nuFZ8LX6N?si=6mVyd5MRSPeVed7XRv9umw"
 youtubeid: "C566PcMG27E"

@@ -6,11 +6,12 @@ draft: false
 release: song
 url: "/home-is-kala-remix"
 image: "/artwork/jay-jules-home-is-kala-remix.jpg"
-credits: "released November 17th, 2023,
-Illustration: Sarah Furrer aka «SaFu»;
-Remix: OXIDIX;
-Original Song: REEL BEETZ & Jay Jules;
-Mastering: Dope Mixes"
+credits: |
+  released November 17th, 2023
+  Illustration: Sarah Furrer aka «SaFu»
+  Remix: OXIDIX
+  Original Song: REEL BEETZ & Jay Jules
+  Mastering: Dope Mixes
 color: "#d2cef3"
 spotify: "https://open.spotify.com/track/5fXRd5iBJsGBqwiBmDfBLa"
 youtubeid: "BEjHuawzCWE"

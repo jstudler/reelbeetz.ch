@@ -6,11 +6,12 @@ draft: false
 release: song
 url: "/now"
 image: "/artwork/jay-jules-now.jpg"
-credits: "released November 18th, 2022,
-Illustration: Sarah Furrer aka «SaFu»;
-Executive Production, Production, Lyrics, Composition, Mix, Drums, Sampling, Bass, Keys, Percussion: REEL BEETZ;
-Executive Production, Production, Lyrics, Composition, Vocals, Sampling, Bass, Keys, Guitars, Percussion: Jay Jules;
-Mastering: Slade Templeton"
+credits: |
+  released November 18th, 2022
+  Illustration: Sarah Furrer aka «SaFu»
+  Executive Production, Production, Lyrics, Composition, Mix, Drums, Sampling, Bass, Keys, Percussion: REEL BEETZ
+  Executive Production, Production, Lyrics, Composition, Vocals, Sampling, Bass, Keys, Guitars, Percussion: Jay Jules
+  Mastering: Slade Templeton
 # color: "#7fc1b7"
 color: "#ebd499"
 spotify: "https://open.spotify.com/track/0zTW6zfdIdr8ufvW8WZPTC"

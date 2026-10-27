@@ -6,7 +6,17 @@ draft: false
 release: album
 url: "/garbage-collection"
 image: "/artwork/reel-beetz-garbage-collection.jpg"
-credits: "composed & produced by REEL BEETZ, artwork by Joel Studler & Lilian Salathé, Flute by Christian Studler, Guitar by Den Dala, Bass by James Iwa, Keys by Kenny Niggli, Guitar by Martin Oesch, Vocals by Carolina Müller, Sampling/Drums/Bass/Keys by Joel Studler, released February 11th, 2022"
+credits: |
+  composed & produced by REEL BEETZ
+  artwork by Joel Studler & Lilian Salathé
+  Flute by Christian Studler
+  Guitar by Den Dala
+  Bass by James Iwa
+  Keys by Kenny Niggli
+  Guitar by Martin Oesch
+  Vocals by Carolina Müller
+  Sampling/Drums/Bass/Keys by Joel Studler
+  released February 11th, 2022
 color: "#000000"
 spotify: "https://open.spotify.com/album/7mDQUSN4kIMjE1cCNG8tLq"
 deezer: "https://www.deezer.com/album/287561572"

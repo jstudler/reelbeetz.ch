@@ -1,0 +1,95 @@
+{{- /*
+  release/palette.html — derives everything colour- and image-related for a
+  release page. Context: the release page.
+
+  The artwork is read through the assets pipeline (see the `static` -> `assets`
+  mount in config.toml), which lets Hugo both resize it and extract its
+  dominant colours. Returns a map:
+
+    cover    responsive, optimised artwork (url / srcset / width)
+    canvas   tiny artwork used as the blurred page background
+    art      original artwork url (always set, used as a fallback)
+    accent   accent colour (front matter `color`, falls back to the artwork)
+    colors   slice of up to 5 dominant artwork colours, most dominant first
+    style    ready-made `style` attribute value exposing all of the above as
+             CSS custom properties
+*/ -}}
+{{- $p := . -}}
+{{- $art := $p.Params.image | default "" -}}
+{{- $res := "" -}}
+{{- with $art -}}
+  {{- $res = resources.Get (strings.TrimPrefix "/" .) -}}
+{{- end -}}
+
+{{- $cover := $art -}}
+{{- $srcset := "" -}}
+{{- $canvas := $art -}}
+{{- $colors := slice -}}
+
+{{- with $res -}}
+  {{- /* 1536w covers the split design's 700px artwork on a 2x display; the
+         smaller steps keep phones and the other two designs cheap. */ -}}
+  {{- $c640 := .Resize "640x webp q82 Lanczos" -}}
+  {{- $c1024 := .Resize "1024x webp q80 Lanczos" -}}
+  {{- $c1536 := .Resize "1536x webp q78 Lanczos" -}}
+  {{- $cover = $c640.RelPermalink -}}
+  {{- $srcset = printf "%s 640w, %s 1024w, %s 1536w" $c640.RelPermalink $c1024.RelPermalink $c1536.RelPermalink -}}
+  {{- $canvas = (.Resize "48x webp q55 Lanczos").RelPermalink -}}
+  {{- $colors = .Colors -}}
+{{- end -}}
+
+{{- /* Accent: the explicit front matter colour wins. Without one we fall back
+       to a mid-dominance artwork colour, which is usually a saturated accent
+       rather than the near-black/near-white extremes. */ -}}
+{{- $accent := $p.Params.color | default "" -}}
+{{- if and (not $accent) (gt (len $colors) 2) -}}
+  {{- $accent = index $colors 2 -}}
+{{- end -}}
+{{- if and (not $accent) $colors -}}
+  {{- $accent = index $colors 0 -}}
+{{- end -}}
+{{- $accent = $accent | default "#f2f2f2" -}}
+
+{{- /* Pad the palette so the CSS variables always exist. */ -}}
+{{- $pal := $colors -}}
+{{- range seq 5 -}}
+  {{- if lt (len $pal) 5 -}}{{- $pal = $pal | append $accent -}}{{- end -}}
+{{- end -}}
+
+{{- /* A readable accent. Several releases set a near-black accent (#000000,
+       #111111, …) which disappears on the dark artwork background, so on dark
+       surfaces we fall back to a neutral light ink. */ -}}
+{{- $lum := partial "release/luminance.html" $accent -}}
+{{- $onDark := $accent -}}
+{{- if lt $lum 0.42 -}}{{- $onDark = "#eef1f5" -}}{{- end -}}
+{{- $onLight := $accent -}}
+{{- if gt $lum 0.72 -}}{{- $onLight = "#1b1d22" -}}{{- end -}}
+
+{{- $showArt := not $p.Params.hideBackgroundImage -}}
+
+{{- /* How bright the artwork is overall. Light artworks need a stronger dark
+       scrim before white or pastel text becomes readable on top of them, so
+       the designs feed --scrim into their background gradients. */ -}}
+{{- $bright := 0.0 -}}
+{{- range $pal -}}
+  {{- $l := partial "release/luminance.html" . -}}
+  {{- $bright = add $bright (div $l 5.0) -}}
+{{- end -}}
+
+{{- $style := printf "--accent:%s;--accent-on-dark:%s;--accent-on-light:%s;--accent-lum:%.3f;--scrim:%.3f;--art-1:%s;--art-2:%s;--art-3:%s;--art-4:%s;--art-5:%s;--canvas:%s;"
+      $accent $onDark $onLight $lum $bright
+      (index $pal 0) (index $pal 1) (index $pal 2) (index $pal 3) (index $pal 4)
+      (cond $showArt (printf "url(%s)" $canvas) "none") -}}
+
+{{- return (dict
+      "cover" $cover
+      "srcset" $srcset
+      "canvas" $canvas
+      "art" $art
+      "showArt" $showArt
+      "accent" $accent
+      "accentOnDark" $onDark
+      "accentOnLight" $onLight
+      "luminance" $lum
+      "colors" $pal
+      "style" $style) -}}

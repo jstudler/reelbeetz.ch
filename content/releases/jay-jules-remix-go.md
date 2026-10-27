@@ -6,11 +6,12 @@ draft: false
 release: song
 url: "/go-dj-kermit-remix"
 image: "/artwork/jay-jules-go-dj-kermit-remix.jpg"
-credits: "released April 5th, 2024,
-Illustration: Sarah Furrer aka «SaFu»;
-Remix: DJ Kermit;
-Original Song: REEL BEETZ & Jay Jules feat. MISS C-LINE;
-Mastering: Dope Mixes"
+credits: |
+  released April 5th, 2024
+  Illustration: Sarah Furrer aka «SaFu»
+  Remix: DJ Kermit
+  Original Song: REEL BEETZ & Jay Jules feat. MISS C-LINE
+  Mastering: Dope Mixes
 color: "#d2cef3"
 spotify: "https://open.spotify.com/track/6vyXc69UOx8TS3tLn6otev"
 youtubeid: "lAtF1HOPEbo"

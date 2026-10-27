@@ -6,11 +6,12 @@ draft: false
 release: song
 url: "/creme-brulee"
 image: "/artwork/so-close-creme-brulee-feat-miss-c-line.jpg"
-credits: "released September 27th, 2024;
-Vocals: MISS C-LINE;
-Production, Drums, Percussion, Synth Bass, Piano, Keyboards, Mix: Joel Studler aka REEL BEETZ;
-Mastering: Dope Mixes;
-Artwork: Lilian Salathé"
+credits: |
+  released September 27th, 2024
+  Vocals: MISS C-LINE
+  Production, Drums, Percussion, Synth Bass, Piano, Keyboards, Mix: Joel Studler aka REEL BEETZ
+  Mastering: Dope Mixes
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#67c8f2"
 spotify: "https://open.spotify.com/track/6QxmBtGyOxRtjBvjL5rvSu"
 youtubeid: "b0p_mi4RTcc"

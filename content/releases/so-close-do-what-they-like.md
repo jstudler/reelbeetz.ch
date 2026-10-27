@@ -6,14 +6,15 @@ draft: false
 release: song
 url: "/do-what-they-like"
 image: "/artwork/so-close-do-what-they-like.jpg"
-credits: "released January 10th, 2025;
-Vocals: Anne Nang'ole;
-Bass: James Iwa;
-Keyboards: Kenny Niggli;
-Saxophone: Leo Bortolotti;
-Production, Drums, Percussion, Synth Bass, Keyboards, Mix: Joel Studler aka REEL BEETZ;
-Mastering: Dope Mixes;
-Artwork: Lilian Salathé"
+credits: |
+  released January 10th, 2025
+  Vocals: Anne Nang'ole
+  Bass: James Iwa
+  Keyboards: Kenny Niggli
+  Saxophone: Leo Bortolotti
+  Production, Drums, Percussion, Synth Bass, Keyboards, Mix: Joel Studler aka REEL BEETZ
+  Mastering: Dope Mixes
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#e9bedc"
 spotify: "https://open.spotify.com/track/5IdrcGCcjR1Wy76RksO6Ce"
 youtubeid: "BLE35jtvuXs"

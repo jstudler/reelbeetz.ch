@@ -6,15 +6,16 @@ draft: false
 release: song
 url: "/so-close"
 image: "/artwork/so-close.jpg"
-credits: "released May 16th, 2025;
-Vocals: MISS C-LINE, Saimon Disko, Anne Nang'ole, Nisl, PeWe, Tommy Vercetti, Z The Freshman, svmthoX;
-Bass: James Iwa, Christian Spahni, Christoph Buchs;
-Keyboards: Kenny Niggli;
-Saxophone: Leo Bortolotti;
-Guitar: David Friedli, Jonas Zahnd;
-Production, Drums, Percussion, Synth Bass, Piano, Keyboards, Mix: Joel Studler aka REEL BEETZ;
-Mastering: Dope Mixes;
-Artwork: Lilian Salathé"
+credits: |
+  released May 16th, 2025
+  Vocals: MISS C-LINE, Saimon Disko, Anne Nang'ole, Nisl, PeWe, Tommy Vercetti, Z The Freshman, svmthoX
+  Bass: James Iwa, Christian Spahni, Christoph Buchs
+  Keyboards: Kenny Niggli
+  Saxophone: Leo Bortolotti
+  Guitar: David Friedli, Jonas Zahnd
+  Production, Drums, Percussion, Synth Bass, Piano, Keyboards, Mix: Joel Studler aka REEL BEETZ
+  Mastering: Dope Mixes
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#fff"
 spotify: "https://open.spotify.com/album/6z113XqXeeDSQIAlwq6ncB"
 youtubeid: "75En0FW9EKU"

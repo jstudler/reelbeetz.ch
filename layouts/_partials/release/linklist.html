@@ -1,0 +1,14 @@
+{{- /*
+  release/linklist.html — the classic icon + label link list.
+  Context: a slice of services from release/services.html.
+*/ -}}
+<ul class="rl__links">
+  {{- range . }}
+  <li class="svc svc--{{ .key }}">
+    <a href="{{ .url }}" target="_blank" rel="noopener">
+      <span class="svc__glyph-wrap">{{ partial "release/icon.html" .icon }}</span>
+      <span class="svc__name">{{ .name }}</span>
+    </a>
+  </li>
+  {{- end }}
+</ul>

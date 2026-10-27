@@ -6,13 +6,14 @@ draft: false
 release: song
 url: "/d-schuflae-glaenzt"
 image: "/artwork/so-close-d-schuflae-glaenzt.jpg"
-credits: "released February 7th, 2025;
-Vocals: Nisl & PeWe;
-Bass: James Iwa;
-Guitar: David Friedli;
-Production, Drums, Percussion, Synth Bass, Keyboards, Mix: Joel Studler aka REEL BEETZ;
-Mastering: Dope Mixes;
-Artwork: Lilian Salathé"
+credits: |
+  released February 7th, 2025
+  Vocals: Nisl & PeWe
+  Bass: James Iwa
+  Guitar: David Friedli
+  Production, Drums, Percussion, Synth Bass, Keyboards, Mix: Joel Studler aka REEL BEETZ
+  Mastering: Dope Mixes
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#e9bedc"
 spotify: "https://open.spotify.com/track/4l84gohFCMw8g93fzDEOrJ"
 youtubeid: "cVwyH8EPTlo"
