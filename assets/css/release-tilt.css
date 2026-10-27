@@ -1,13 +1,16 @@
 /* ==========================================================================
    release-tilt.css
-   The 3D tilt the artwork follows the pointer with, shared by all designs.
+   The 3D tilt the artwork follows the pointer, or the device, with.
 
-   release-tilt.js only writes --tilt-x and --tilt-y, normalised to -1..1.
-   Everything else is decided here, which keeps the effect off entirely
-   wherever the media queries below do not apply — the properties default to
-   0, so the artwork simply sits flat.
+   release-tilt.js writes --tilt-x and --tilt-y, normalised to -1..1, and puts
+   `data-release-tilt-live` on <html> while an input source is actually
+   running. Everything else is decided here, so the effect is inert unless the
+   script has found something to drive it: the properties default to 0 and the
+   artwork simply sits flat.
 
-   Desktop only, and off under prefers-reduced-motion.
+   Which inputs qualify is the script's call — a fine pointer on a wide
+   screen, or device motion on a touch device. Both are relative, so the
+   artwork always drifts back to a flat square when the input stops.
    ========================================================================== */
 
 [data-release-tilt] {
@@ -23,31 +26,39 @@
   transform-style: preserve-3d;
 }
 
-@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
-  [data-release-tilt] {
-    --tilt-max: 7deg;
-    --tilt-lift: 14px;
-    will-change: transform;
-    /* The artwork leans far enough for a corner to lift past its own box, so
-       nothing may clip it. */
-    backface-visibility: hidden;
-  }
+[data-release-tilt-live] [data-release-tilt] {
+  --tilt-max: 7deg;
+  --tilt-lift: 14px;
+  will-change: transform;
+  /* The artwork leans far enough for a corner to lift past its own box, so
+     nothing may clip it. */
+  backface-visibility: hidden;
+}
 
-  /* The shadow swings against the tilt, which is what sells the near corner
-     lifting off the page rather than the whole image just rotating. */
-  [data-release-tilt].rs__cover,
-  [data-release-tilt].rl__cover,
-  [data-release-tilt].rc__cover {
-    box-shadow:
-      0 2px 4px rgba(0, 0, 0, 0.32),
-      calc(var(--tilt-y) * -26px)
-      calc(var(--tilt-x) * 26px + 34px)
-      64px -24px rgba(0, 0, 0, 0.85);
+/* The shadow swings against the tilt, which is what sells the near corner
+   lifting off the page rather than the whole image just rotating. */
+[data-release-tilt-live] [data-release-tilt].rs__cover,
+[data-release-tilt-live] [data-release-tilt].rl__cover,
+[data-release-tilt-live] [data-release-tilt].rc__cover {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.32),
+    calc(var(--tilt-y) * -26px)
+    calc(var(--tilt-x) * 26px + 34px)
+    64px -24px rgba(0, 0, 0, 0.85);
+}
+
+/* Touch devices hold the artwork larger and closer, so the same angle reads
+   as much more movement. */
+@media (hover: none), (pointer: coarse) {
+  [data-release-tilt-live] [data-release-tilt] {
+    --tilt-max: 5deg;
+    --tilt-lift: 8px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-release-tilt] {
+  [data-release-tilt],
+  [data-release-tilt-live] [data-release-tilt] {
     --tilt-max: 0deg;
     --tilt-lift: 0px;
     will-change: auto;

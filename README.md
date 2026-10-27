@@ -152,17 +152,31 @@ one flowing paragraph, exactly as before.
 
 ### Artwork tilt
 
-On desktop the artwork leans in 3D as the pointer moves, so it reads as a physical sleeve
-rather than a flat image. [`assets/js/release-tilt.js`](assets/js/release-tilt.js) is
-~130 lines of dependency-free JS that only writes two custom properties, `--tilt-x` and
-`--tilt-y`, normalised to `-1..1`;
-[`assets/css/release-tilt.css`](assets/css/release-tilt.css) decides what that means —
-currently a 7° rotation, a 14px lift and a shadow that swings against the tilt.
+The artwork leans in 3D as you move, so it reads as a physical sleeve rather than a flat
+image. [`assets/js/release-tilt.js`](assets/js/release-tilt.js) only writes two custom
+properties, `--tilt-x` and `--tilt-y`, normalised to `-1..1`, plus a
+`data-release-tilt-live` flag on `<html>` while an input source is running;
+[`assets/css/release-tilt.css`](assets/css/release-tilt.css) decides what that looks like.
+Opt an element in with `data-release-tilt`.
 
-Opt an element in with `data-release-tilt`. The effect requires
-`(min-width: 1024px) and (hover: hover) and (pointer: fine)`, so phones and tablets never
-run it, and it is disabled under `prefers-reduced-motion`. The script stops its animation
-frame loop as soon as the value settles, so an idle page costs nothing.
+Two input sources, both **relative rather than absolute**, so the artwork always drifts
+back to a flat square:
+
+- **Fine pointer** (`min-width: 1024px`, `hover: hover`, `pointer: fine`) — follows the
+  cursor, then eases back to neutral after it has been still for 600ms.
+- **Device motion** on touch devices — the baseline continuously drifts towards however
+  the device is currently held, so only *changes* tilt the artwork. Holding a phone at any
+  angle settles back to neutral within a few seconds, and one resting on a table never
+  sits at a permanent angle.
+
+Disabled entirely under `prefers-reduced-motion`, and the animation frame loop stops as
+soon as the values settle, so an idle page costs nothing.
+
+iOS 13+ puts device orientation behind a permission prompt that only a user gesture can
+trigger. Asking a visitor for motion access the moment they tap a link is worse than
+quietly doing without, so the script does not ask: Android and already-granted iOS get the
+effect, everyone else sees a still artwork. `REQUEST_MOTION_PERMISSION` at the top of the
+script flips that if you disagree.
 
 ### What was fixed in the classic design
 
