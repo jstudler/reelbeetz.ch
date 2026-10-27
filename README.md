@@ -66,6 +66,32 @@ Hugo resolves `<layout>-baseof.html` per layout, so each design owns a base temp
 body template. Note that a layout name must not contain a hyphen — Hugo splits on it and
 then fails to find the matching base template, which is why the names use underscores.
 
+### Comparing the designs locally
+
+`content/releases/zz-preview-{classic,split,card}.md` render the same release in all three
+designs, so they can be compared side by side:
+
+```shell
+hugo server
+# http://localhost:1313/preview-classic/
+# http://localhost:1313/preview-split/
+# http://localhost:1313/preview-card/
+```
+
+They are **local only**. Each is `draft: true`, and
+[`config/development/config.toml`](config/development/config.toml) — which Hugo merges on
+top of the root config for the `development` environment that `hugo server` runs in — sets
+`buildDrafts = true`. A production `hugo` build runs in the `production` environment, does
+not build drafts, and therefore never emits them.
+
+They also carry `build: { list: never }`, so even locally they stay out of the releases
+list, the pagination, the sitemap and the RSS feed; the only difference to production is
+the three extra URLs.
+
+The files mirror `content/releases/so-close-creme-brulee.md`. If you want to preview a
+different release, copy its front matter over and keep the `draft`, `build`, `layout` and
+`url` keys.
+
 ### Structure
 
 Markup is shared through partials in [`layouts/_partials/release/`](layouts/_partials/release),

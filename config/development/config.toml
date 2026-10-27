@@ -1,0 +1,6 @@
+# Development-only overrides, merged on top of the root config.toml.
+#
+# `hugo server` runs in the "development" environment, a plain `hugo` build runs
+# in "production". Building drafts here is what makes the content/releases/zz-*.md
+# design previews show up locally while staying out of the deployed site.
+buildDrafts = true
