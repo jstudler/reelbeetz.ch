@@ -154,8 +154,9 @@ img { max-width: 100%; }
 }
 
 .rs__panel-inner {
+  --rs-panel-gap: clamp(1.75rem, 4vw, 2.5rem);
   display: grid;
-  gap: clamp(1.75rem, 4vw, 2.5rem);
+  gap: var(--rs-panel-gap);
   width: 100%;
   max-width: 34rem;
   margin-inline: auto;
@@ -191,7 +192,10 @@ img { max-width: 100%; }
   height: auto;
 }
 
-.embed--audio iframe { height: 352px; }
+/* Phones get Spotify's compact bar so the links start above the fold; the
+   full-size player returns at 768px. See the 768px breakpoint for the
+   matching reorder of the two players. */
+.embed--audio iframe { height: 80px; }
 
 /* ---------------------------------------------------------- service rows -- */
 
@@ -316,6 +320,18 @@ a:focus-visible {
 
   /* Stacked layout, so the page scrolls and only width constrains the artwork. */
   .rs__cover { width: min(700px, 100%, 52vw); }
+
+  /* Back to both players at the top of the panel, video first. The negative
+     margin closes the panel gap between them so they read as one block, the
+     way they do in the markup on phones. */
+  .rs__media--video {
+    order: -2;
+    margin-bottom: calc(0.75rem - var(--rs-panel-gap));
+  }
+
+  .rs__media--audio { order: -1; }
+
+  .embed--audio iframe { height: 352px; }
 
   .rs__links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
