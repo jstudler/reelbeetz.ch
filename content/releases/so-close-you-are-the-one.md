@@ -6,13 +6,14 @@ draft: false
 release: song
 url: "/you-are-the-one"
 image: "/artwork/so-close-you-are-the-one.jpg"
-credits: "released November 29th, 2024;
-Vocals: MISS C-LINE;
-Bass: James Iwa;
-Keyboards: Kenny Niggli;
-Production, Drums, Percussion, Mix: Joel Studler aka REEL BEETZ;
-Mastering: Dope Mixes;
-Artwork: Lilian Salathé"
+credits: |
+  released November 29th, 2024
+  Vocals: MISS C-LINE
+  Bass: James Iwa
+  Keyboards: Kenny Niggli
+  Production, Drums, Percussion, Mix: Joel Studler aka REEL BEETZ
+  Mastering: Dope Mixes
+  Artwork: Lilian Salathé
 color: "#d5e8cc"
 spotify: "https://open.spotify.com/track/7wKv538c8mkmY6tfPAPo0y"
 youtubeid: "5ITBKBlbLZI"

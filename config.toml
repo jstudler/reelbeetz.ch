@@ -25,6 +25,14 @@ ignoreFiles = [ ".DS_Store" ]
 [markup.goldmark.renderer]
   unsafe = true
 
+# Goldmark turns bare URLs into links by default, which made the
+# "(www.liliansalathe.ch)" in several releases' credits a link as soon as
+# credits started being rendered as Markdown. Links in credits are not wanted
+# yet, and no markdown body on this site relies on autolinking, so require the
+# explicit [text](url) form everywhere.
+[markup.goldmark.extensions]
+  linkify = false
+
 # The release layouts read the artwork through the assets pipeline so Hugo can
 # resize it and extract its dominant colours (`.Colors`). Artwork lives in
 # static/, which is not an asset source by default, so mount it as one. Declaring

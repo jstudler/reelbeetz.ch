@@ -6,11 +6,12 @@ draft: false
 release: song
 url: "/standstrong"
 image: "/artwork/reel-beetz-stand-strong-feat-burni-aman-veronikas-ndiigo.jpg"
-credits: "released October 11, 2019,
-Vocals: Veronika's NDIIGO,
-Rap: Burni Aman,
-Production, Composition, Mix, Artwork: Joel Studler,
-Artwork: Lilian Salathé (www.liliansalathe.ch)"
+credits: |
+  released October 11, 2019
+  Vocals: Veronika's NDIIGO
+  Rap: Burni Aman
+  Production, Composition, Mix, Artwork: Joel Studler
+  Artwork: Lilian Salathé (www.liliansalathe.ch)
 color: "#111111"
 spotify: "https://open.spotify.com/track/395kXQNqAYVgGlaqKTl5Lt"
 deezer: "https://www.deezer.com/track/766355252"

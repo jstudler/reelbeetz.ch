@@ -6,11 +6,12 @@ draft: false
 release: song
 url: "/stepbystep"
 image: "/artwork/reel-beetz-step-by-step-feat-miss-c-line-arbajo-jairus.jpg"
-credits: "released August 2, 2019,
-Rap: Arbajo Jairus,
-Rap, Vocals: Miss C-Line,
-Production, Beatprogramming, Drums, Composition, Mix, Video, Artwork: Joel Studler,
-Artwork, Video: Lilian Salathé (www.liliansalathe.ch)"
+credits: |
+  released August 2, 2019
+  Rap: Arbajo Jairus
+  Rap, Vocals: Miss C-Line
+  Production, Beatprogramming, Drums, Composition, Mix, Video, Artwork: Joel Studler
+  Artwork, Video: Lilian Salathé (www.liliansalathe.ch)
 color: "#111111"
 spotify: "https://open.spotify.com/track/43aq0YgpGFAj3SFsaWCRBh"
 soundcloud: "https://soundcloud.com/reelbeetz/step-by-step"

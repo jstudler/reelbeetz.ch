@@ -8,35 +8,36 @@
 # `build.list: never` keeps it out of the releases list, pagination, the
 # sitemap and the RSS feed, so the local site matches production everywhere else.
 #
-# Mirrors content/releases/so-close-creme-brulee.md so the three designs can be
+# Mirrors content/releases/original-flavour.md so the three designs can be
 # compared side by side on /preview-classic, /preview-split and /preview-card.
-title: "Crème Brûlée"
-date: 2024-09-27T08:00:00+01:00
+title: "Original Flavour"
+date: 2026-03-27T08:00:00+01:00
 layout: release
 draft: true
 build:
   list: never
 release: song
 url: "/preview-split"
-image: "/artwork/so-close-creme-brulee-feat-miss-c-line.jpg"
+image: "/artwork/robert-solt-reel-beetz-original-flavour.jpg"
 credits: |
-  released September 27th, 2024
-  Vocals: **MISS C-LINE**
-  Production, Drums, Percussion, Synth Bass, Piano, Keyboards, Mix: [Joel Studler aka REEL BEETZ](https://reelbeetz.ch/)
+  released March 27th, 2026
+  Saxophone, Flute, Keyboards, Bass: Robert Solt
+  Production, Drums, Percussion, Keyboards, Mix: Joel Studler aka REEL BEETZ
   Mastering: Dope Mixes
-  Artwork: Lilian Salathé
-color: "#67c8f2"
-spotify: "https://open.spotify.com/track/6QxmBtGyOxRtjBvjL5rvSu"
-youtubeid: "rbTNHPeZpKg"
-tidal: "https://tidal.com/album/405643591/u"
-pandora: "https://www.pandora.com/TR:135420571"
-deezer: "https://www.deezer.com/track/3141087571"
-apple: "https://geo.music.apple.com/ch/album/_/1785208464?mt=1&app=music&ls=1&at=1000lHKX&ct=odesli_http&itscg=30200&itsct=odsl_m"
-# amazonmusic: "https://music.amazon.com/albums/B0DGGR4PPW?trackAsin=B0DGGSYVHM"
-# amazondownload: "https://music.amazon.com/albums/B0DGGR4PPW?trackAsin=B0DGGSYVHM"
-mx3audio: "https://mx3.ch/t/1SFE"
-bandcamp: "https://reelbeetz.bandcamp.com/track/creme-brulee"
-soundcloud: "https://soundcloud.com/reelbeetz/creme-brulee-feat-miss-c-line"
+  Artwork: Michael Altorfer
+color: "#ed7f40"
+spotify: "https://open.spotify.com/track/2EHhKGCqUTI8KtBVGBWf3w"
+youtubeid: "Hgt9h3o702A"
+tidal: "https://listen.tidal.com/track/501845142"
+pandora: "https://www.pandora.com/TR:194771043"
+deezer: "https://www.deezer.com/us/album/926176771"
+apple: "https://geo.music.apple.com/ch/album/_/1879887294"
+amazonmusic: "https://amazon.com/dp/B0GPXBF5SM"
+amazondownload: "https://amazon.com/dp/B0GPXBF5SM"
+apple_itunes: "https://geo.music.apple.com/ch/album/_/1879887294"
+mx3audio: "https://mx3.ch/t/21VX"
+bandcamp: "https://reelbeetz.bandcamp.com/track/original-flavour"
+# soundcloud: "https://soundcloud.com/reelbeetz/meh-beat-feat-tommy-vercetti"
 ---
-by [REEL BEETZ](https://reelbeetz.ch/) featuring [MISS C-LINE](https://instagram.com/missclineofficial)
 
+by [REEL BEETZ](https://reelbeetz.ch/) & [Robert Solt](https://www.instagram.com/rob.solt/)

@@ -27,10 +27,13 @@
 {{- $colors := slice -}}
 
 {{- with $res -}}
+  {{- /* 1536w covers the split design's 700px artwork on a 2x display; the
+         smaller steps keep phones and the other two designs cheap. */ -}}
   {{- $c640 := .Resize "640x webp q82 Lanczos" -}}
   {{- $c1024 := .Resize "1024x webp q80 Lanczos" -}}
+  {{- $c1536 := .Resize "1536x webp q78 Lanczos" -}}
   {{- $cover = $c640.RelPermalink -}}
-  {{- $srcset = printf "%s 640w, %s 1024w" $c640.RelPermalink $c1024.RelPermalink -}}
+  {{- $srcset = printf "%s 640w, %s 1024w, %s 1536w" $c640.RelPermalink $c1024.RelPermalink $c1536.RelPermalink -}}
   {{- $canvas = (.Resize "48x webp q55 Lanczos").RelPermalink -}}
   {{- $colors = .Colors -}}
 {{- end -}}

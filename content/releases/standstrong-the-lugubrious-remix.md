@@ -6,12 +6,13 @@ draft: false
 release: song
 url: "/standstrong-thelugubrious-remix"
 image: "/artwork/reel-beetz-stand-strong-the-lugubrious-remix-feat-burni-aman-veronikas-ndiigo.jpg"
-credits: "released February 21st, 2020,
-Remix: The Lugubrious,
-Vocals: Veronika's NDIIGO,
-Rap: Burni Aman,
-Composition: Joel Studler,
-Artwork: Lilian Salathé (www.liliansalathe.ch)"
+credits: |
+  released February 21st, 2020
+  Remix: The Lugubrious
+  Vocals: Veronika's NDIIGO
+  Rap: Burni Aman
+  Composition: Joel Studler
+  Artwork: Lilian Salathé (www.liliansalathe.ch)
 color: "#111111"
 mx3audio: "https://mx3.ch/t/1vuo"
 youtubeid: "AvQ-Jc9m_E4"

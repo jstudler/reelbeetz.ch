@@ -6,18 +6,16 @@ draft: false
 release: album
 url: "/upsidedown"
 image: "/artwork/reel-beetz-upside-down.jpg"
-credits: "released February 3, 2017,
-
-Sa Mood: Vocals & Rap,
-Possibility: Rap,
-David Zürcher: Vocals,
-Manuel Halter: Keyboards,
-César Gonin: Bass,
-Joel Studler: Drums,
-
-Lilian Salathé: Artwork,
-
-Mixed and Produced by REEL BEETZ. All compositions by REEL BEETZ."
+credits: |
+  released February 3, 2017
+  Sa Mood: Vocals & Rap
+  Possibility: Rap
+  David Zürcher: Vocals
+  Manuel Halter: Keyboards
+  César Gonin: Bass
+  Joel Studler: Drums
+  Lilian Salathé: Artwork
+  Mixed and Produced by REEL BEETZ. All compositions by REEL BEETZ.
 color: "#ffdaa1"
 spotify: https://open.spotify.com/album/1RtggTGQdbMtJqMwl9wV3y
 soundcloud: "https://soundcloud.com/reelbeetz/sets/upside-down"

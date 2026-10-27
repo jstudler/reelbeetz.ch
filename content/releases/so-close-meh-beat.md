@@ -6,12 +6,13 @@ draft: false
 release: song
 url: "/meh-beat"
 image: "/artwork/so-close-meh-beat.jpg"
-credits: "released March 7th, 2025;
-Vocals: Tommy Vercetti;
-Keyboards: Kenny Niggli;
-Production, Drums, Percussion, Synth Bass, Keyboards, Mix: Joel Studler aka REEL BEETZ;
-Mastering: Dope Mixes;
-Artwork: Lilian Salathé"
+credits: |
+  released March 7th, 2025
+  Vocals: Tommy Vercetti
+  Keyboards: Kenny Niggli
+  Production, Drums, Percussion, Synth Bass, Keyboards, Mix: Joel Studler aka REEL BEETZ
+  Mastering: Dope Mixes
+  Artwork: Lilian Salathé
 color: "#ff954b"
 spotify: "https://open.spotify.com/track/6Kyw7HJt9qEUI8n8JUBPUP"
 youtubeid: "O0_awPp7BMg"

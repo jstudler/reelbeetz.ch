@@ -6,13 +6,14 @@ draft: false
 release: song
 url: "/kalibriert"
 image: "/artwork/so-close-kalibriert.jpg"
-credits: "released April 4th, 2025;
-Vocals: Z The Freshman;
-Guitar: David Friedli;
-Bass: Christoph Buchs;
-Production, Drums, Mix: Joel Studler aka REEL BEETZ;
-Mastering: Dope Mixes;
-Artwork: Lilian Salathé"
+credits: |
+  released April 4th, 2025
+  Vocals: Z The Freshman
+  Guitar: David Friedli
+  Bass: Christoph Buchs
+  Production, Drums, Mix: Joel Studler aka REEL BEETZ
+  Mastering: Dope Mixes
+  Artwork: Lilian Salathé
 color: "#e99439"
 spotify: "https://open.spotify.com/album/4lDvR9Sc2m3GoZwATOZS2z?si=ka69ys_NRiOcuV6SXLlbzg"
 youtubeid: "8u3NE1liTlU"

@@ -6,12 +6,13 @@ draft: false
 release: song
 url: "/lost-and-found"
 image: "/artwork/lost-and-found.jpg"
-credits: "released January 27th, 2023;
-Vocals: Phase One;
-Keys, Bass, Mix assistance: James Iwa;
-Drums, Mix: REEL BEETZ;
-Mastering: Dope Mixes;
-Artwork: Lilian Salathé"
+credits: |
+  released January 27th, 2023
+  Vocals: Phase One
+  Keys, Bass, Mix assistance: James Iwa
+  Drums, Mix: REEL BEETZ
+  Mastering: Dope Mixes
+  Artwork: Lilian Salathé
 color: "#f7a6a5"
 spotify: "https://open.spotify.com/track/7v9ErJGg8oTyv3hzUWUbRQ"
 youtubeid: "sBUwL9YMlJ8"
