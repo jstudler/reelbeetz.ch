@@ -15,6 +15,9 @@
 {{- $s := slice -}}
 
 {{- /* ---------------------------------------------------------- Listen */ -}}
+{{- with $p.Params.tidal -}}
+  {{- $s = $s | append (dict "group" "listen" "key" "tidal" "icon" "tidal" "name" "Tidal" "url" .) -}}
+{{- end -}}
 {{- with $p.Params.spotify -}}
   {{- $s = $s | append (dict "group" "listen" "key" "spotify" "icon" "spotify" "name" "Spotify" "url" .) -}}
 {{- end -}}
@@ -41,9 +44,6 @@
 {{- end -}}
 {{- with $p.Params.amazonmusic -}}
   {{- $s = $s | append (dict "group" "listen" "key" "amazon" "icon" "amazon" "name" "Amazon Music" "url" .) -}}
-{{- end -}}
-{{- with $p.Params.tidal -}}
-  {{- $s = $s | append (dict "group" "listen" "key" "tidal" "icon" "tidal" "name" "Tidal" "url" .) -}}
 {{- end -}}
 {{- with $p.Params.napster -}}
   {{- $s = $s | append (dict "group" "listen" "key" "napster" "icon" "napster" "name" "Napster" "url" .) -}}
