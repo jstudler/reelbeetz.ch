@@ -11,7 +11,7 @@ credits: |
   Vocals: MISS C-LINE
   Production, Drums, Percussion, Synth Bass, Piano, Keyboards, Mix: Joel Studler aka REEL BEETZ
   Mastering: Dope Mixes
-  Artwork: Lilian Salathé
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#67c8f2"
 spotify: "https://open.spotify.com/track/6QxmBtGyOxRtjBvjL5rvSu"
 youtubeid: "b0p_mi4RTcc"

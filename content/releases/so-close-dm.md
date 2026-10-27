@@ -12,7 +12,7 @@ credits: |
   Bass: Christian Spahni
   Production, Drums, Percussion, Piano, Keyboards, Mix: Joel Studler aka REEL BEETZ
   Mastering: Dope Mixes
-  Artwork: Lilian Salathé
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#ffffff"
 spotify: "https://open.spotify.com/track/105PGYd29vBuUlvDl2y2gO"
 youtubeid: "WpzC_8odRfY"

@@ -1,8 +1,6 @@
 ---
 # Local-only design preview — Showcase Card.
 #
-# Inspired by: https://bfan.link/creme-brulee-1
-#
 # `draft: true` plus `buildDrafts` in config/development/config.toml means this
 # page is served by `hugo server` but never by a production `hugo` build.
 # `build.list: never` keeps it out of the releases list, pagination, the

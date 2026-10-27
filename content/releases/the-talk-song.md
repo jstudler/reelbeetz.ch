@@ -8,7 +8,7 @@ url: "/thetalk"
 image: "/artwork/the-talk-song.jpg"
 credits: |
   released April 4th, 2020
-  Artwork: Lilian Salathé (www.liliansalathe.ch)
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#e6d094"
 spotify: "https://open.spotify.com/track/6RdaoHzl6tuuNiqYgPMqLO"
 deezer: "https://www.deezer.com/track/915223202"

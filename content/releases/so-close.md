@@ -15,7 +15,7 @@ credits: |
   Guitar: David Friedli, Jonas Zahnd
   Production, Drums, Percussion, Synth Bass, Piano, Keyboards, Mix: Joel Studler aka REEL BEETZ
   Mastering: Dope Mixes
-  Artwork: Lilian Salathé
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#fff"
 spotify: "https://open.spotify.com/album/6z113XqXeeDSQIAlwq6ncB"
 youtubeid: "75En0FW9EKU"

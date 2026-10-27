@@ -12,7 +12,7 @@ credits: |
   Vocals: Veronika's NDIIGO
   Rap: Burni Aman
   Composition: Joel Studler
-  Artwork: Lilian Salathé (www.liliansalathe.ch)
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#111111"
 mx3audio: "https://mx3.ch/t/1vuo"
 youtubeid: "AvQ-Jc9m_E4"

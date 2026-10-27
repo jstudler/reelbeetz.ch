@@ -13,7 +13,7 @@ credits: |
   Bass: James Iwa
   Production, Drums, Keyboards, Mix: Joel Studler aka REEL BEETZ
   Mastering: Dope Mixes
-  Artwork: Lilian Salathé
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#ebc524"
 spotify: "https://open.spotify.com/track/0CRWGyBujZNNKF31PYKduQ"
 youtubeid: "gb87CG04jws"

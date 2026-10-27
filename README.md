@@ -47,11 +47,11 @@ front matter. Three designs live in [`layouts/_default/`](layouts/_default); the
 the same title, content, credits, YouTube and Spotify embeds and the exact same set of
 service links, and they are all responsive from phone to desktop.
 
-| `layout:`         | Design                | Inspired by                                     |
-| ----------------- | --------------------- | ----------------------------------------------- |
-| `release`         | Split Stage (default) | <https://music.imusician.pro/a/LlETmnp1>        |
-| `release_classic` | Classic               | the earlier reelbeetz.ch release page, rebuilt  |
-| `release_card`    | Showcase Card         | <https://bfan.link/creme-brulee-1>              |
+| `layout:`         | Design                |
+| ----------------- | --------------------- |
+| `release`         | Split Stage (default) |
+| `release_classic` | Classic               |
+| `release_card`    | Showcase Card         |
 
 Every release carries `layout: release` and therefore gets the Split Stage design. Picking
 a different one is a one-line change:
@@ -135,7 +135,7 @@ credits: |
   released September 27th, 2024
   Vocals: **MISS C-LINE**
   Mix: [Joel Studler aka REEL BEETZ](https://reelbeetz.ch/)
-  Artwork: Lilian Salathé
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 ```
 
 The `|` matters. A quoted scalar spanning several lines is a *folded* scalar — YAML

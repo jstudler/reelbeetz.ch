@@ -12,7 +12,7 @@ credits: |
   Keys, Bass, Mix assistance: James Iwa
   Drums, Mix: REEL BEETZ
   Mastering: Dope Mixes
-  Artwork: Lilian Salathé
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#f7a6a5"
 spotify: "https://open.spotify.com/track/7v9ErJGg8oTyv3hzUWUbRQ"
 youtubeid: "sBUwL9YMlJ8"

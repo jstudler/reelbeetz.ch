@@ -1,8 +1,6 @@
 ---
 # Local-only design preview — Split Stage.
 #
-# Inspired by: https://music.imusician.pro/a/LlETmnp1
-#
 # `draft: true` plus `buildDrafts` in config/development/config.toml means this
 # page is served by `hugo server` but never by a production `hugo` build.
 # `build.list: never` keeps it out of the releases list, pagination, the

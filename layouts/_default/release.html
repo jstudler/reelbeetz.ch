@@ -1,10 +1,7 @@
 {{- /*
   Design 1 — "Split Stage"  (layout: release — the default)
 
-  Inspired by the iMusician smart link: a full-height artwork stage on the
-  left, a calm light panel with the player embeds and the service rows on the
-  right. On tablet and phone the two panes stack and the panel turns into a
-  sheet that slides under the artwork.
+  a full-height artwork stage on the left, a calm light panel with the player embeds and the service rows on the right. On tablet and phone the two panes stack and the panel turns into a sheet that slides under the artwork.
 */ -}}
 {{ define "main" }}
 {{- $pal := partialCached "release/palette.html" . .RelPermalink -}}

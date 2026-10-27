@@ -13,7 +13,7 @@ credits: |
   Guitar: David Friedli
   Production, Drums, Percussion, Synth Bass, Keyboards, Mix: Joel Studler aka REEL BEETZ
   Mastering: Dope Mixes
-  Artwork: Lilian Salathé
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#e9bedc"
 spotify: "https://open.spotify.com/track/4l84gohFCMw8g93fzDEOrJ"
 youtubeid: "cVwyH8EPTlo"

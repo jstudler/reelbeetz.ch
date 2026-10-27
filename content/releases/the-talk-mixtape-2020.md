@@ -8,7 +8,7 @@ url: "/thetalk-mixtape-2020"
 image: "/artwork/the-talk-mixtape-2020.jpg"
 credits: |
   released May 1st, 2020
-  Artwork: Lilian Salathé (www.liliansalathe.ch)
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#e6d094"
 spotify: "https://open.spotify.com/album/3QmPyBBxPL0uvM1W8VbsDd?si=-bWrYk4zTRKhlv6ymk2IPA"
 deezer: "https://www.deezer.com/album/145151222"

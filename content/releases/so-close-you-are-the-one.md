@@ -13,7 +13,7 @@ credits: |
   Keyboards: Kenny Niggli
   Production, Drums, Percussion, Mix: Joel Studler aka REEL BEETZ
   Mastering: Dope Mixes
-  Artwork: Lilian Salathé
+  Artwork: [Lilian Salathé](https://www.liliansalathe.ch)
 color: "#d5e8cc"
 spotify: "https://open.spotify.com/track/7wKv538c8mkmY6tfPAPo0y"
 youtubeid: "5ITBKBlbLZI"
