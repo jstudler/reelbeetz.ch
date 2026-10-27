@@ -312,6 +312,11 @@ a:focus-visible {
 @media (min-width: 768px) {
   .rs__panel-inner { max-width: 44rem; }
 
+  .rs__stage-inner { max-width: 44rem; }
+
+  /* Stacked layout, so the page scrolls and only width constrains the artwork. */
+  .rs__cover { width: min(700px, 100%, 52vw); }
+
   .rs__links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.6rem;
@@ -329,9 +334,14 @@ a:focus-visible {
     overflow: hidden;
   }
 
+  /* The stage never scrolls. Its blurred backdrop is an absolutely positioned
+     ::before with `inset: -15%`, so anything other than `overflow: hidden`
+     turns that decoration into ~200px of phantom scrollable content. The
+     artwork below is sized against the viewport height instead, so the stage
+     always fits. */
   .rs__stage {
     min-height: 0;
-    overflow-y: auto;
+    overflow: hidden;
     padding-block: 3rem;
   }
 
@@ -351,11 +361,18 @@ a:focus-visible {
 
   .rs__links { grid-template-columns: minmax(0, 1fr); }
 
-  .rs__cover { width: min(21rem, 26vw); }
+  .rs__stage-inner { max-width: 44rem; }
+
+  /* Grow the artwork into whatever height is left over, up to 700px. The 20rem
+     reserve covers the stage padding, the flex gaps and a title wrapping to two
+     lines, which is what keeps the stage from needing to scroll. */
+  .rs__cover {
+    width: min(700px, 100%, calc(100vh - 20rem));
+    width: min(700px, 100%, calc(100dvh - 20rem));
+  }
 }
 
 @media (min-width: 1440px) {
-  .rs__cover { width: 23rem; }
   .rs__title { font-size: 3.75rem; }
 }
 
