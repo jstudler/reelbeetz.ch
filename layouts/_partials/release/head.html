@@ -8,8 +8,25 @@
 {{- $p := .page -}}
 {{- $pal := .palette -}}
 {{- $css := .css -}}
-{{- $subtitle := $p.Content | plainify | chomp -}}
-{{- $desc := printf "%s – %s, listen on Spotify, Apple Music, YouTube and more. %s" $p.Title $subtitle ($p.Params.credits | default "") | chomp -}}
+
+{{- /* `plainify` strips tags but leaves entities encoded, and it returns
+       template.HTML. Inside <title> that value is emitted verbatim, so the
+       entity survives intact — but `printf` drops the template.HTML marker,
+       so the description was escaped a second time and search engines showed
+       the raw "&amp;" and "&rsquo;". Unescaping here produces real text that
+       Go then escapes exactly once, in both places. */ -}}
+{{- $subtitle := $p.Content | plainify | htmlUnescape | chomp -}}
+
+{{- /* Credits are authored in Markdown and may span several lines. Flatten
+       them before rendering — `plainify` turns newlines into plain spaces, so
+       joining with "; " first keeps the one-line description readable and
+       matches the punctuation the older single-line credits already use. */ -}}
+{{- $credits := "" -}}
+{{- with $p.Params.credits -}}
+  {{- $credits = . | chomp | replaceRE `\s*\n\s*` "; " | markdownify | plainify | htmlUnescape | chomp -}}
+{{- end -}}
+
+{{- $desc := printf "%s – %s, listen on Spotify, Apple Music, YouTube and more. %s" $p.Title $subtitle $credits | chomp -}}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{ $p.Title }} – {{ $subtitle }}</title>
