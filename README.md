@@ -125,6 +125,30 @@ everything as custom properties on `<html>`:
 Releases that set `hideBackgroundImage: true` get `--canvas: none` and are painted from the
 `--art-*` palette alone.
 
+### Credits
+
+`credits` is rendered with `markdownify`, so it accepts Markdown and raw HTML:
+
+```yaml
+credits: |
+  released September 27th, 2024
+  Vocals: **MISS C-LINE**
+  Mix: [Joel Studler aka REEL BEETZ](https://reelbeetz.ch/)
+  Artwork: Lilian Salathé
+```
+
+The `|` matters. A quoted scalar spanning several lines is a *folded* scalar — YAML
+replaces every line break with a space while parsing, so the line breaks are gone before
+Hugo ever sees the value and no template function can bring them back. `|` is a literal
+block scalar and keeps them. The designs set `white-space: pre-line` on the credits block,
+which is what turns those line breaks into rendered ones.
+
+Raw HTML needs `markup.goldmark.renderer.unsafe`, which [`config.toml`](config.toml) sets;
+Goldmark drops raw HTML otherwise.
+
+Releases that still use the older single-quoted form keep working — they just render as
+one flowing paragraph, exactly as before.
+
 ### What was fixed in the classic design
 
 - added the missing `<meta charset>` and `<meta name="viewport">`; without the viewport tag

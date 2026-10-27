@@ -235,13 +235,22 @@ img { max-width: 100%; }
   text-align: center;
 }
 
-.rl__credits p {
-  margin: 0;
+/* See the note in release-split.css: markdownify + `pre-line` is what makes a
+   "credits: |" block scalar keep its line breaks. */
+.rl__credits-body {
   font-size: 0.95rem;
   font-weight: 300;
   line-height: 1.8;
   color: var(--rl-muted);
+  white-space: pre-line;
 }
+
+.rl__credits-body > :first-child { margin-top: 0; }
+.rl__credits-body > :last-child { margin-bottom: 0; }
+.rl__credits-body p { margin: 0 0 0.6em; }
+.rl__credits-body ul,
+.rl__credits-body ol { white-space: normal; margin: 0; padding-left: 1.2em; }
+.rl__credits-body a { color: inherit; text-underline-offset: 0.16em; }
 
 /* --------------------------------------------------------------- focus --- */
 
@@ -284,7 +293,7 @@ a:focus-visible {
   .rl-bg { display: none; }
   body.rl-body { background: #fff; color: #000; }
   .rl__lead p,
-  .rl__credits p { color: #333; }
+  .rl__credits-body { color: #333; }
   .rl__links a,
   .svc__glyph-wrap { color: #000; }
   .embed { display: none; }

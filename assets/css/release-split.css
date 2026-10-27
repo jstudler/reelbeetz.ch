@@ -293,13 +293,25 @@ img { max-width: 100%; }
   border-top: 1px solid var(--rs-panel-line);
 }
 
-.rs__credits p {
-  margin: 0;
+/* Credits are rendered with markdownify, so they may contain Markdown and raw
+   HTML. `pre-line` is what makes the line breaks of a YAML block scalar
+   ("credits: |") show up as line breaks, while still collapsing the
+   indentation that the block scalar strips anyway. Lists opt out, otherwise
+   the newlines between their tags would double-space them. */
+.rs__credits-body {
   font-size: 0.85rem;
   font-weight: 300;
   line-height: 1.7;
   color: var(--rs-panel-muted);
+  white-space: pre-line;
 }
+
+.rs__credits-body > :first-child { margin-top: 0; }
+.rs__credits-body > :last-child { margin-bottom: 0; }
+.rs__credits-body p { margin: 0 0 0.6em; }
+.rs__credits-body ul,
+.rs__credits-body ol { white-space: normal; margin: 0; padding-left: 1.2em; }
+.rs__credits-body a { color: inherit; text-underline-offset: 0.16em; }
 
 /* --------------------------------------------------------------- focus --- */
 

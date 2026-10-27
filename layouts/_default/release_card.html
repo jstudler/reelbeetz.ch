@@ -62,7 +62,7 @@
         {{ with .Params.credits }}
         <section class="rc__credits" id="credits" aria-label="Credits">
           <h2 class="rc__group-title">Credits</h2>
-          <p>{{ . }}</p>
+          <div class="rc__credits-body">{{ . | markdownify }}</div>
         </section>
         {{ end }}
 

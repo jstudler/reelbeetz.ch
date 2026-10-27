@@ -18,6 +18,13 @@ ignoreFiles = [ ".DS_Store" ]
   group = ""
   category = ""
 
+# Release credits are rendered through markdownify so they can carry Markdown
+# and raw HTML. Goldmark discards raw HTML unless the renderer is marked
+# unsafe; this is a single-author site, so there is no untrusted Markdown to
+# protect against.
+[markup.goldmark.renderer]
+  unsafe = true
+
 # The release layouts read the artwork through the assets pipeline so Hugo can
 # resize it and extract its dominant colours (`.Colors`). Artwork lives in
 # static/, which is not an asset source by default, so mount it as one. Declaring
