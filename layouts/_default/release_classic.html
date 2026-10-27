@@ -1,0 +1,81 @@
+{{- /*
+  Design 3 — the original REEL BEETZ release page, repaired.
+  (layout: release_classic)
+
+  The look is unchanged: oversized hairline title, three columns, artwork
+  blurred into the background. What changed is underneath:
+
+    * the page is a normal document again. #main used to be
+      `position:absolute; top:0; bottom:0`, which pinned the content to the
+      viewport height, so on short screens the lower links were unreachable.
+    * the YouTube iframe keeps a 16:9 ratio (it had `height:auto` on an
+      element whose height came from a hardcoded 315px attribute).
+    * the blurred artwork is now also visible on phones — `#bg img` was
+      display:none below 992px, leaving most visitors on a flat colour.
+    * link labels no longer inherit an unreadable accent: releases with
+      color "#000000" / "#111111" rendered black text on a black background.
+    * the duplicated "mobileonly" Spotify/Apple list is gone; the real list
+      reflows instead, so every link appears exactly once.
+*/ -}}
+{{ define "main" }}
+{{- $pal := partialCached "release/palette.html" . .RelPermalink -}}
+{{- $services := partial "release/services.html" . -}}
+{{- $listen := where $services "group" "listen" -}}
+{{- $watch := where $services "group" "watch" -}}
+{{- $download := where $services "group" "download" -}}
+
+<main class="rl">
+
+  <header class="rl__head" id="title">
+    <h1>{{ .Title }}</h1>
+    <div class="rl__lead">{{ .Content }}</div>
+  </header>
+
+  <div class="rl__cols">
+
+    <section class="rl__col rl__col--cover" id="cover">
+      {{ with $pal.cover }}
+      <img class="rl__cover"
+           src="{{ . }}"{{ with $pal.srcset }} srcset="{{ . }}" sizes="(min-width: 992px) 360px, (min-width: 640px) 45vw, 100vw"{{ end }}
+           width="640" height="640"
+           alt="{{ $.Title }} – artwork" decoding="async" fetchpriority="high">
+      {{ end }}
+      {{ partial "release/embeds.html" . }}
+    </section>
+
+    {{ with $listen }}
+    <section class="rl__col" id="listen">
+      <div class="linkblock">
+        <h2>Listen on&hellip;</h2>
+        {{ partial "release/linklist.html" . }}
+      </div>
+    </section>
+    {{ end }}
+
+    {{ if or $watch $download }}
+    <section class="rl__col" id="watchdownload">
+      {{ with $watch }}
+      <div class="linkblock">
+        <h2>Watch on&hellip;</h2>
+        {{ partial "release/linklist.html" . }}
+      </div>
+      {{ end }}
+      {{ with $download }}
+      <div class="linkblock">
+        <h2>Download from&hellip;</h2>
+        {{ partial "release/linklist.html" . }}
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+
+  </div>
+
+  {{ with .Params.credits }}
+  <footer class="rl__credits" id="credits">
+    <div class="rl__credits-body">{{ . | markdownify }}</div>
+  </footer>
+  {{ end }}
+
+</main>
+{{ end }}

@@ -12,7 +12,7 @@
 # compared side by side on /preview-classic, /preview-split and /preview-card.
 title: "Crème Brûlée"
 date: 2024-09-27T08:00:00+01:00
-layout: release
+layout: release_classic
 draft: true
 build:
   list: never

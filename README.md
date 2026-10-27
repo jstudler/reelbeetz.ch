@@ -47,18 +47,19 @@ front matter. Three designs live in [`layouts/_default/`](layouts/_default); the
 the same title, content, credits, YouTube and Spotify embeds and the exact same set of
 service links, and they are all responsive from phone to desktop.
 
-| `layout:`        | Design                | Inspired by                                                      |
-| ---------------- | --------------------- | ---------------------------------------------------------------- |
-| `release`        | Classic (default)     | the existing reelbeetz.ch release page, rebuilt                   |
-| `release_split`  | Split Stage           | <https://music.imusician.pro/a/LlETmnp1>                          |
-| `release_card`   | Showcase Card         | <https://bfan.link/creme-brulee-1>                                |
+| `layout:`         | Design                | Inspired by                                     |
+| ----------------- | --------------------- | ----------------------------------------------- |
+| `release`         | Split Stage (default) | <https://music.imusician.pro/a/LlETmnp1>        |
+| `release_classic` | Classic               | the earlier reelbeetz.ch release page, rebuilt  |
+| `release_card`    | Showcase Card         | <https://bfan.link/creme-brulee-1>              |
 
-Switching a release is a one-line change:
+Every release carries `layout: release` and therefore gets the Split Stage design. Picking
+a different one is a one-line change:
 
 ```yaml
 ---
 title: "Crème Brûlée"
-layout: release_split   # was: release
+layout: release_card   # was: release
 ---
 ```
 
@@ -150,6 +151,10 @@ Releases that still use the older single-quoted form keep working — they just 
 one flowing paragraph, exactly as before.
 
 ### What was fixed in the classic design
+
+Kept as `release_classic`, this is the earlier release page repaired rather than replaced.
+Several of these fixes (the missing meta tags, the dropped Bootstrap CDN, the resized
+artwork) apply to all three designs, since they share the same head and partials.
 
 - added the missing `<meta charset>` and `<meta name="viewport">`; without the viewport tag
   mobile browsers laid the page out at ~980px and zoomed out, so the media queries never

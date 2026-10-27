@@ -1,29 +1,14 @@
-{{- /*
-  Base template for the original ("classic") release design.
-
-  Fixes over the previous version:
-    * adds the missing <meta charset> and <meta name="viewport"> — without the
-      viewport tag mobile browsers laid the page out at ~980px and zoomed out,
-      so none of the media queries ever did what they promised
-    * moves the page CSS into assets/css/*.css, bundled, minified and
-      fingerprinted through Hugo Pipes instead of a 300-line inline <style>
-    * drops the render-blocking Bootstrap 4.4.1 CDN (end of life, ~160 KB for
-      a single three-column grid) in favour of a small CSS grid
-    * exposes the artwork palette as custom properties so the background can be
-      built from the record's own colours
-*/ -}}
 {{- $pal := partialCached "release/palette.html" . .RelPermalink -}}
 {{- $css := slice
       (resources.Get "css/release-brands.css")
-      (resources.Get "css/release-classic.css")
-    | resources.Concat "css/release-classic.bundle.css" | minify | fingerprint -}}
+      (resources.Get "css/release-split.css")
+    | resources.Concat "css/release-split.bundle.css" | minify | fingerprint -}}
 <!DOCTYPE html>
 <html lang="{{ site.Language.Lang | default "en" }}" style="{{ $pal.style | safeCSS }}">
 <head>
 {{ partial "release/head.html" (dict "page" . "palette" $pal "css" $css) }}
 </head>
-<body class="rl-body">
-<div class="rl-bg" aria-hidden="true"></div>
+<body class="rs-body">
 {{ block "main" . }}{{ end }}
 {{ partial "release/analytics.html" . }}
 </body>
