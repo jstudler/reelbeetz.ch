@@ -12,6 +12,11 @@ ignoreFiles = [ ".DS_Store" ]
 
 [params.posts]
   folderName = "releases"
+  # The theme paginates the home page list with `params.posts.pagesize`
+  # (default 6), not Hugo's own `pagination.pagerSize`. A page size larger than
+  # the release count puts every release on one page; the theme's pagination
+  # partial then renders nothing because it only outputs when TotalPages > 1.
+  pagesize = 9999
 
 [taxonomies]
   tag = ""
